@@ -144,8 +144,8 @@ class RKN_MortarTargetSlot : SCR_ScenarioFrameworkSlotBase
 			if (m_bAdjustFire)
 			{
 				m_bAdjustFire = false;
-				SetIntroSignalValues(m_sAdjustSounds.m_iAdjustIntroIndex, m_sAdjustSounds.m_iAdjustOutroIndex);
-				PlayCorrection(m_sAdjustSounds.m_sAdjustOutroSoundEvent, m_sAdjustSounds.m_sAdjustOutroSubtitles);
+				SetIntroSignalValues(m_sAdjustSounds.m_iAdjustPrefixIndex, m_sAdjustSounds.m_iAdjustSuffixIndex, m_sAdjustSounds.m_iAdjustHitIndex);
+				PlayCorrection(m_sAdjustSounds.m_sAdjustHitSoundEvent, m_sAdjustSounds.m_sAdjustHitSubtitles);
 			}
 			m_iSplashesOnTarget++;
 			if (++m_iSplashes >= m_iRequiredSplashes)
@@ -169,8 +169,8 @@ class RKN_MortarTargetSlot : SCR_ScenarioFrameworkSlotBase
 			//Print("HitDi : " + hitDirection);
 			//Print("Rotated : " + rotatedHit);
 			Print("Off target");
-			SetIntroSignalValues(m_sAdjustSounds.m_iAdjustIntroIndex, m_sAdjustSounds.m_iAdjustOutroIndex);
-			PlayCorrection(m_sAdjustSounds.m_sAdjustIntroSoundEvent, m_sAdjustSounds.m_sAdjustIntroSubtitles);
+			SetIntroSignalValues(m_sAdjustSounds.m_iAdjustPrefixIndex, m_sAdjustSounds.m_iAdjustSuffixIndex, m_sAdjustSounds.m_iAdjustHitIndex);
+			PlayCorrection(m_sAdjustSounds.m_sAdjustPrefixSoundEvent, m_sAdjustSounds.m_sAdjustPrefixSubtitles);
 			int onLineDirectionIndex = 0;
 			int onLineDistanceIndex = 0;
 			int offsetDirectionIndex = 0;
@@ -220,6 +220,7 @@ class RKN_MortarTargetSlot : SCR_ScenarioFrameworkSlotBase
 			Print(subtitles);
 			SetAdjustSignalValues(onLineDirectionIndex, onLineDistanceIndex, offsetDirectionIndex, offsetDistanceIndex);
 			PlayCorrection(m_sAdjustSounds.m_sAdjustSoundEvent, subtitles);
+			PlayCorrection(m_sAdjustSounds.m_sAdjustSuffixSoundEvent, m_sAdjustSounds.m_sAdjustSuffixSubtitles);
 		}
 		else
 		{
@@ -314,12 +315,13 @@ class RKN_MortarTargetSlot : SCR_ScenarioFrameworkSlotBase
 		signalManager.SetSignalValue(signalManager.FindSignal("OffsetDistance"), offsetDistanceIndex);
 	}
 	
-	private void SetIntroSignalValues(int introIndex, int outroIndex)
+	private void SetIntroSignalValues(int prefixIndex, int suffixIndex, int hitIndex)
 	{
 		SCR_ScenarioFrameworkParam<IEntity> entityWrapper = SCR_ScenarioFrameworkParam<IEntity>.Cast(m_SoundActorGetter.Get());
 		SignalsManagerComponent signalManager = SignalsManagerComponent.Cast(entityWrapper.GetValue().FindComponent(SignalsManagerComponent));
-		signalManager.SetSignalValue(signalManager.FindSignal("AdjustIntro"), introIndex);
-		signalManager.SetSignalValue(signalManager.FindSignal("AdjustOutro"), outroIndex);
+		signalManager.SetSignalValue(signalManager.FindSignal("AdjustPrefix"), prefixIndex);
+		signalManager.SetSignalValue(signalManager.FindSignal("AdjustSuffix"), suffixIndex);
+		signalManager.SetSignalValue(signalManager.FindSignal("AdjustHit"), hitIndex);
 	}
 	
 	private void PlayCorrection(string soundEventName, string subtitle)

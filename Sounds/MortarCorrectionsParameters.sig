@@ -34,7 +34,7 @@ AudioSignalResClass {
   }
   IOPItemInputClass {
    id 9
-   name "AdjustIntro"
+   name "AdjustPrefix"
    tl -196.5 367.5
    children {
     10
@@ -42,10 +42,18 @@ AudioSignalResClass {
   }
   IOPItemInputClass {
    id 11
-   name "AdjustOutro"
+   name "AdjustSuffix"
    tl -197.457 459.761
    children {
     12
+   }
+  }
+  IOPItemInputClass {
+   id 14
+   name "AdjustHit"
+   tl -195.5 553.5
+   children {
+    13
    }
   }
  }
@@ -76,20 +84,26 @@ AudioSignalResClass {
   }
   IOPItemOutputClass {
    id 10
-   name "AdjustIntro"
+   name "AdjustPrefix"
    tl 204.5 368.5
    input 9
   }
   IOPItemOutputClass {
    id 12
-   name "AdjustOutro"
+   name "AdjustSuffix"
    tl 203.543 460.761
    input 11
+  }
+  IOPItemOutputClass {
+   id 13
+   name "AdjustHit"
+   tl 205.5 554.5
+   input 14
   }
  }
  compiled IOPCompiledClass {
   visited {
-   645 646 517 518 389 390 261 262 133 134 5 6
+   773 774 645 646 517 518 389 390 261 262 133 134 5 6
   }
   ins {
    IOPCompiledIn {
@@ -120,6 +134,11 @@ AudioSignalResClass {
    IOPCompiledIn {
     data {
      1 327682
+    }
+   }
+   IOPCompiledIn {
+    data {
+     1 393218
     }
    }
   }
@@ -154,8 +173,13 @@ AudioSignalResClass {
      0
     }
    }
+   IOPCompiledOut {
+    data {
+     0
+    }
+   }
   }
-  processed 12
+  processed 14
   version 2
  }
 }

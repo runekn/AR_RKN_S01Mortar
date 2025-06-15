@@ -70,7 +70,7 @@ VA3 (Radio)
 	Firemission 1A success - Tone: *Bit relieved. Somewhat professional.*
 		"Hammer, Charlie 2-2"
 		"Good effect. We broke out while they were scattered."
-		"We'll take the long around back to Regina and link up with the rest of Charlie."
+		"We'll take the long way around back to Regina and link up with the rest of Charlie."
 		"End of mission. Out."
 		
 	Firemission 1A adjustments. Words will be combined programatically.
@@ -80,6 +80,7 @@ VA3 (Radio)
 		"Left"
 		"Right"
 		"25 meters"
+		"50 meters"
 		"100 meters"
 		"200 meters"
 		"300 meters"
@@ -87,7 +88,7 @@ VA3 (Radio)
 		"Charlie 2-2. You got it! <i>Fire for effect</i>. Out."
 	
 	Firemission 1B request - Tone: *Urgent. Somewhat professional.*
-		"Hammer, Charlie 2-2    -- Does not need to be rerecorded"
+		"Hammer, Charlie 2-2"    -- Does not need to be rerecorded
 		"We got ambushed on our way to Regina."
 		"We're taking cover in a building complex we believe is called <i>Camurac</i>. I say again, Camurac."
 		"We need a Fire mission. <i>Adjust fire. Polar. Bearing 065, distance 200 meters.</i> HE. Danger close. Out."
@@ -161,6 +162,7 @@ VA4 (Radio) - Tone: *Professional. Authorative.*
 		"Left"
 		"Right"
 		"25 meters"
+		"50 meters"
 		"100 meters"
 		"200 meters"
 		"300 meters"
@@ -191,17 +193,18 @@ VA5 (Radio)
 		"Good splashes. We see signs of surrender. End of mission. Out."
 		
 	Firemission 3A adjustments. Words will be combined programatically.
-		"India 1-2. Splash. Adjust"
+		"India 3. Splash. Adjust"
 		"South"
 		"North"
 		"West"
 		"East"
 		"25 meters"
+		"50 meters"
 		"100 meters"
 		"200 meters"
 		"300 meters"
 		"Out"
-		"India 1-2. On Target. <i>Fire for effect</i>! Out."
+		"India 3. On Target. <i>Fire for effect</i>! Out."
 	
 	Firemission 3B request - Tone: *Urgent. Bit unprofessional.*
 		"Bravo to Hammer. Come in!"
@@ -241,12 +244,13 @@ VA5 (Radio)
 		"HQ will like this. Bravo out."
 		
 	Firemission 3C adjustments. Words will be combined programatically.
-		"Bravo 2 to Hammer. The shell hit "
+		"Bravo 2 to Hammer. The shell hit uhm.."
 		"Over by"
 		"Short by"
 		"Left by"
 		"Right by"
 		"25 meters"
+		"50 meters"
 		"100 meters"
 		"200 meters"
 		"300 meters"

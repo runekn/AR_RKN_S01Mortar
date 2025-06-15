@@ -2,52 +2,61 @@
 class RKN_MortarTargetVoiceLines
 {
 	
-	[Attribute("SOUND_FIREMISSION_ADJUST_INTRO")]
-	string m_sAdjustIntroSoundEvent;
+	[Attribute(defvalue: "SOUND_FIREMISSION_ADJUST_PREFIX", category: "Prefix")]
+	string m_sAdjustPrefixSoundEvent;
 	
-	[Attribute("0")]
-	int m_iAdjustIntroIndex;
+	[Attribute("0", category: "Prefix")]
+	int m_iAdjustPrefixIndex;
 	
-	[Attribute()]
-	string m_sAdjustIntroSubtitles;
+	[Attribute(category: "Prefix")]
+	string m_sAdjustPrefixSubtitles;
 	
-	[Attribute("SOUND_FIREMISSION_ADJUST_OUTRO")]
-	string m_sAdjustOutroSoundEvent;
+	[Attribute("SOUND_FIREMISSION_ADJUST_SUFFIX", category: "Suffix")]
+	string m_sAdjustSuffixSoundEvent;
 	
-	[Attribute("0")]
-	int m_iAdjustOutroIndex;
+	[Attribute("0", category: "Suffix")]
+	int m_iAdjustSuffixIndex;
 	
-	[Attribute()]
-	string m_sAdjustOutroSubtitles;
+	[Attribute(category: "Suffix")]
+	string m_sAdjustSuffixSubtitles;
 	
-	[Attribute("SOUND_FIREMISSION_ADJUST")]
+	[Attribute("SOUND_FIREMISSION_ADJUST_HIT", category: "Hit")]
+	string m_sAdjustHitSoundEvent;
+	
+	[Attribute("0", category: "Hit")]
+	int m_iAdjustHitIndex;
+	
+	[Attribute(category: "Hit")]
+	string m_sAdjustHitSubtitles;
+	
+	[Attribute("SOUND_FIREMISSION_ADJUST", category: "Adjustment")]
 	string m_sAdjustSoundEvent;
 	
-	[Attribute(defvalue: "1", params: "0 inf")]
+	[Attribute(defvalue: "1", params: "0 inf", category: "Adjustment")]
 	int m_iOverIndex;
 	
-	[Attribute(defvalue: "Drop")]
+	[Attribute(defvalue: "Drop", category: "Adjustment")]
 	string m_sOverSubtitles;
 	
-	[Attribute(defvalue: "2", params: "0 inf")]
+	[Attribute(defvalue: "2", params: "0 inf", category: "Adjustment")]
 	int m_iShortIndex;
 	
-	[Attribute(defvalue: "Add")]
+	[Attribute(defvalue: "Add", category: "Adjustment")]
 	string m_sShortSubtitles;
 	
-	[Attribute(defvalue: "1", params: "0 inf")]
+	[Attribute(defvalue: "1", params: "0 inf", category: "Adjustment")]
 	int m_iLeftIndex;
 	
-	[Attribute(defvalue: "Right")] // opposite since they are directions for next shot
+	[Attribute(defvalue: "Right", category: "Adjustment")] // opposite since they are directions for next shot
 	string m_sLeftSubtitles;
 	
-	[Attribute(defvalue: "2", params: "0 inf")]
+	[Attribute(defvalue: "2", params: "0 inf", category: "Adjustment")]
 	int m_iRightIndex;
 	
-	[Attribute(defvalue: "Left")] // opposite since they are directions for next shot
+	[Attribute(defvalue: "Left", category: "Adjustment")] // opposite since they are directions for next shot
 	string m_sRightSubtitles;
 	
-	[Attribute(desc: "Must be in ascending order")]
+	[Attribute(desc: "Must be in ascending order", category: "Adjustment")]
 	ref array<ref RKN_MortarTargetDistanceConfig> m_aDistances;
 }
 

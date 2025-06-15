@@ -498,8 +498,8 @@ StringTable {
   }
   CustomStringTableItem "{65946448299B041B}" {
    Id "AR-RKN_SP01M-VA_FM3A_Adj_Hit"
-   Target_en_us "India 1-2. On Target. <i>Fire for effect</i>! Out."
-   Modified 1704394288
+   Target_en_us "India 3. On Target. <i>Fire for effect</i>! Out."
+   Modified 1704888465
    Author "Rune"
    LastChanged "Rune"
   }
@@ -519,8 +519,8 @@ StringTable {
   }
   CustomStringTableItem "{6594644830053484}" {
    Id "AR-RKN_SP01M-VA_FM3A_Adj_Prefix"
-   Target_en_us "India 1-2. Splash. Adjust"
-   Modified 1704279211
+   Target_en_us "India 3. Splash. Adjust"
+   Modified 1704888460
    Author "Rune"
    LastChanged "Rune"
   }
