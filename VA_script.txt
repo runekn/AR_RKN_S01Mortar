@@ -117,11 +117,11 @@ VA3 (Radio)
 		"Bird has flown. End of mission. Out."
 	
 	Firemission 1C failure - Tone: *Professional. Calm.*
-		"Hammer, Charlie 1. No effective on target."
+		"Hammer, Charlie 1. No effect on target."
 		"Bird has flown. End of mission. Out."    -- Does not need to be rerecorded
 	
 	Firemission 1C success - Tone: *Professional. Calm.*
-		"Hammer, Charlie 1. Good effective on target."
+		"Hammer, Charlie 1. Good effect on target."
 		"Enemy team destroyed. End of mission. Out."
 		
 	Firemission 1C adjustments
