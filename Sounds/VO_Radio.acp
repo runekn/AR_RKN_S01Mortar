@@ -2943,7 +2943,7 @@ AudioClass {
      Index 6
     }
     AudioBankSampleClass Sample {
-     Filename "{A9B86F56C898DA94}Sounds/Samples/AR_50M.wav"
+     Filename "{D68597AD4F6BEBA5}Sounds/Samples/FIREMISSION_3A/SOUND_FIREMISSION_3A_ADJUST_50M.wav"
      Index 7
     }
     AudioBankSampleClass Sample {
@@ -3136,7 +3136,7 @@ AudioClass {
      Index 6
     }
     AudioBankSampleClass Sample {
-     Filename "{A9B86F56C898DA94}Sounds/Samples/AR_50M.wav"
+     Filename "{D68597AD4F6BEBA5}Sounds/Samples/FIREMISSION_3A/SOUND_FIREMISSION_3A_ADJUST_50M.wav"
      Index 7
     }
     AudioBankSampleClass Sample {
@@ -3273,7 +3273,7 @@ AudioClass {
      Filename "{1CB2BFBF67C65B4A}Sounds/Samples/FIREMISSION_1A/SOUND_FIREMISSION_1A_REQUEST_1.wav"
     }
     AudioBankSampleClass Sample {
-     Filename "{90B60EC850BD531F}Sounds/Samples/FIREMISSION_1B/SOUND_FIREMISSION_1B_REQUEST_1.wav"
+     Filename "{1CB2BFBF67C65B4A}Sounds/Samples/FIREMISSION_1A/SOUND_FIREMISSION_1A_REQUEST_1.wav"
      Index 1
     }
     AudioBankSampleClass Sample {
@@ -3305,7 +3305,7 @@ AudioClass {
      Index 8
     }
     AudioBankSampleClass Sample {
-     Filename "{25153F296E07C516}Sounds/Samples/FIREMISSION_AMBUSH/SOUND_FIREMISSION_AMBUSH_REQUEST_1.wav"
+     Filename "{744C2BBAB3DAE30B}Sounds/Samples/FIREMISSION_0/SOUND_FIREMISSION_0_REQUEST_1.wav"
      Index 9
     }
    }
@@ -3364,7 +3364,7 @@ AudioClass {
      Index 8
     }
     AudioBankSampleClass Sample {
-     Filename "{BC0B86B073E0F486}Sounds/Samples/FIREMISSION_AMBUSH/SOUND_FIREMISSION_AMBUSH_REQUEST_2.wav"
+     Filename "{ED529223AE3DD29B}Sounds/Samples/FIREMISSION_0/SOUND_FIREMISSION_0_REQUEST_2.wav"
      Index 9
     }
    }
@@ -3423,7 +3423,7 @@ AudioClass {
      Index 8
     }
     AudioBankSampleClass Sample {
-     Filename "{CB01EE3887421BF6}Sounds/Samples/FIREMISSION_AMBUSH/SOUND_FIREMISSION_AMBUSH_REQUEST_3.wav"
+     Filename "{9A58FAAB5A9F3DEB}Sounds/Samples/FIREMISSION_0/SOUND_FIREMISSION_0_REQUEST_3.wav"
      Index 9
     }
    }
@@ -3501,7 +3501,7 @@ AudioClass {
      Index 8
     }
     AudioBankSampleClass Sample {
-     Filename "{D6848A02F42B80D0}Sounds/Samples/FIREMISSION_AMBUSH/SOUND_FIREMISSION_AMBUSH_TIMEOUT_1.wav"
+     Filename "{87DD9E9129F6A6CD}Sounds/Samples/FIREMISSION_0/SOUND_FIREMISSION_0_TIMEOUT_1.wav"
      Index 9
     }
    }
@@ -3548,7 +3548,7 @@ AudioClass {
      Index 8
     }
     AudioBankSampleClass Sample {
-     Filename "{4F9A339BE9CCB140}Sounds/Samples/FIREMISSION_AMBUSH/SOUND_FIREMISSION_AMBUSH_TIMEOUT_2.wav"
+     Filename "{1EC327083411975D}Sounds/Samples/FIREMISSION_0/SOUND_FIREMISSION_0_TIMEOUT_2.wav"
      Index 9
     }
    }
@@ -3599,7 +3599,7 @@ AudioClass {
      Index 8
     }
     AudioBankSampleClass Sample {
-     Filename "{C45536A622500667}Sounds/Samples/FIREMISSION_AMBUSH/SOUND_FIREMISSION_AMBUSH_SUCCESS_1.wav"
+     Filename "{950C2235FF8D207A}Sounds/Samples/FIREMISSION_0/SOUND_FIREMISSION_0_SUCCESS_1.wav"
      Index 9
     }
    }
@@ -3776,7 +3776,7 @@ AudioClass {
    tl -1795.698 5239.367
    Samples {
     AudioBankSampleClass Sample {
-     Filename "{F57562446C9412C7}Sounds/Samples/FIREMISSION_AMBUSH/SOUND_FIREMISSION_AMBUSH_SUCCESS_SMOKE_1.wav"
+     Filename "{E266079349E4419C}Sounds/Samples/FIREMISSION_0/SOUND_FIREMISSION_0_SUCCESS_SMOKE_1.wav"
     }
    }
   }
@@ -3787,7 +3787,7 @@ AudioClass {
    tl -1795.698 5406.38
    Samples {
     AudioBankSampleClass Sample {
-     Filename "{6C6BDBDD71732357}Sounds/Samples/FIREMISSION_AMBUSH/SOUND_FIREMISSION_AMBUSH_SUCCESS_SMOKE_2.wav"
+     Filename "{7B78BE0A5403700C}Sounds/Samples/FIREMISSION_0/SOUND_FIREMISSION_0_SUCCESS_SMOKE_2.wav"
     }
    }
   }

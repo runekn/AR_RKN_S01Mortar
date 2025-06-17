@@ -1,5 +1,5 @@
 MetaFileClass {
- Name "{D6848A02F42B80D0}Sounds/Samples/FIREMISSION_AMBUSH/SOUND_FIREMISSION_AMBUSH_TIMEOUT_1.wav"
+ Name "{E266079349E4419C}Sounds/Samples/FIREMISSION_0/SOUND_FIREMISSION_0_SUCCESS_SMOKE_1.wav"
  Configurations {
   WAVResourceClass PC : "{F72B05D02F3F135E}Configs/System/ResourceTypes/PC/Sound.conf" {
   }

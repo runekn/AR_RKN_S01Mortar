@@ -307,6 +307,7 @@ class RKN_MortarTargetSlot : SCR_ScenarioFrameworkSlotBase
 	
 	private void SetAdjustSignalValues(int onLineDirectionIndex, int onLineDistanceIndex, int offsetDirectionIndex, int offsetDistanceIndex)
 	{
+		Print("onLineDirectionIndex: " + onLineDirectionIndex + ", onLineDistanceIndex: " + onLineDistanceIndex + ", offsetDirectionIndex: " + offsetDirectionIndex + ", offsetDistanceIndex: " + offsetDistanceIndex);
 		SCR_ScenarioFrameworkParam<IEntity> entityWrapper = SCR_ScenarioFrameworkParam<IEntity>.Cast(m_SoundActorGetter.Get());
 		SignalsManagerComponent signalManager = SignalsManagerComponent.Cast(entityWrapper.GetValue().FindComponent(SignalsManagerComponent));
 		signalManager.SetSignalValue(signalManager.FindSignal("OnLineDirection"), onLineDirectionIndex);

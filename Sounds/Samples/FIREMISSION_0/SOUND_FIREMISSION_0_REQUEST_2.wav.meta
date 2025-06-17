@@ -1,5 +1,5 @@
 MetaFileClass {
- Name "{BECB214B6CD1D860}Sounds/AR_200M.wav"
+ Name "{ED529223AE3DD29B}Sounds/Samples/FIREMISSION_0/SOUND_FIREMISSION_0_REQUEST_2.wav"
  Configurations {
   WAVResourceClass PC : "{F72B05D02F3F135E}Configs/System/ResourceTypes/PC/Sound.conf" {
   }

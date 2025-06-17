@@ -697,7 +697,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
         Duration 3
         m_aActions {
          SCR_ScenarioFrameworkActionWaitAndExecute "{6572680ACAB39BAC}" {
-          m_iDelayInSeconds 6
+          m_iDelayInSeconds 8
           m_aActions {
            SCR_ScenarioFrameworkActionSpawnObjects "{6572680AFF03768C}" {
             m_aNameOfObjectsToSpawnOnActivation {
