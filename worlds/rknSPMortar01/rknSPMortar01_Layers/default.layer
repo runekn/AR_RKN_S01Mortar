@@ -94,13 +94,17 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
              "Ally_layer"
             }
            }
+           RKN_PlayerSitAction "{65A861C062EFAF22}" {
+            m_bDebug 1
+           }
           }
          }
         }
         m_sObjectToSpawn "{4FA04722BD0020CA}Prefabs/MP/Spawning/SpawnPoint_US_SP.et"
        }
       }
-      coords 0 0 0
+      coords 9.524 0 -0.201
+      angleY 90
      }
     }
    }
@@ -175,17 +179,22 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
                }
               }
              }
-             SCR_ScenarioFrameworkActionVoiceOverPlaySequence "{65790BF2DFDFE387}" {
-              m_sVoiceOverDataConfig "{5319BF1C90A39E63}Configs/VoiceData/rknSPMortar01.conf"
-              m_sSequenceName "AMBUSH_SUCCESS_SMOKE"
-              m_ActorGetter RKN_GetRadioEntity "{65790BF2E4ED8111}" {
-              }
-              m_PlayerGetter SCR_ScenarioFrameworkGetPlayerEntity "{65790BF2E70BFDD1}" {
-              }
+             SCR_ScenarioFrameworkActionWaitAndExecute "{65A861D25B6E8050}" {
+              m_iDelayInSeconds 10
               m_aActions {
-               SCR_ScenarioFrameworkActionChangeTaskState "{65790BF2F8E649F4}" {
-                m_Getter SCR_ScenarioFrameworkGetTask "{6572924043FD41B2}" {
-                 m_sLayerTaskName "AmbushTask_layer"
+               SCR_ScenarioFrameworkActionVoiceOverPlaySequence "{65A861D250683502}" {
+                m_sVoiceOverDataConfig "{5319BF1C90A39E63}Configs/VoiceData/rknSPMortar01.conf"
+                m_sSequenceName "AMBUSH_SUCCESS_SMOKE"
+                m_ActorGetter RKN_GetRadioEntity "{65790BF2E4ED8111}" {
+                }
+                m_PlayerGetter SCR_ScenarioFrameworkGetPlayerEntity "{65790BF2E70BFDD1}" {
+                }
+                m_aActions {
+                 SCR_ScenarioFrameworkActionChangeTaskState "{65790BF2F8E649F4}" {
+                  m_Getter SCR_ScenarioFrameworkGetTask "{6572924043FD41B2}" {
+                   m_sLayerTaskName "AmbushTask_layer"
+                  }
+                 }
                 }
                }
               }
@@ -306,7 +315,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
                }
               }
               SCR_ScenarioFrameworkActionWaitAndExecute "{65790BFDC4E8D091}" {
-               m_iDelayInSeconds 5
+               m_iDelayInSeconds 10
                m_aActions {
                 RKN_VoiceOverPlayFiremissionSequence "{65790BFD2F93B408}" {
                  m_sVoiceOverDataConfig "{5319BF1C90A39E63}Configs/VoiceData/rknSPMortar01.conf"
@@ -609,6 +618,15 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
   }
   coords 8638.044 289.596 4306.019
   {
+   $grp StaticModelEntity : "{01AE5FD77A9A4C21}Prefabs/Structures/Military/Camps/TentSmallUS_01/TentSmallUS_01.et" {
+    {
+     coords -15.842 1.004 15.382
+    }
+    {
+     coords -22.4 0.543 10.469
+     angleY -46.14
+    }
+   }
    GenericEntity : "{028D9156F90205DE}Prefabs/Props/Military/Camps/ConstructionMaterialPacked_WoodPlanks_01_US.et" {
     coords -13.154 0.363 5.859
    }
@@ -643,7 +661,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
      angleY -91.111
     }
     {
-     coords 4.03 0.031 -3.834
+     coords 4.03 -0.032 -3.834
      angleY 3.066
     }
    }
@@ -653,9 +671,33 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
    GenericEntity : "{192A4FF528CB9DD0}Prefabs/Structures/Military/Camps/Foundations/Foundation_TentUS_01.et" {
     coords -1.758 0.004 -0.521
    }
-   GenericEntity : "{34D385CE8A17BD61}Prefabs/Structures/Military/CamoNets/US/CamoNet_AssemblyKit_US.et" {
-    coords 5.344 0.039 -3.976
-    angleY 21.316
+   StaticModelEntity : "{19A3C48FC2665A3F}Prefabs/Props/Construction/GravelPile_01/GravelPile_01_large.et" {
+    coords 28.538 -1.798 6.483
+    angleX -9.34
+    angleZ 1.888
+   }
+   StaticModelEntity : "{1D0170B58B108CC9}Prefabs/Structures/Military/Camps/TentUS_01/Parts/TentUS_01_Floor01.et" {
+    coords -20.021 0.815 14.376
+    angleX -1.142
+    angleY -24.402
+    angleZ -2.811
+   }
+   GenericEntity : "{24F9FA667DE0B56E}Prefabs/Props/Military/Camps/BoxMRE_01.et" {
+    coords -21.591 0.876 13.69
+   }
+   GenericEntity : "{27E4C0ECA5EB1318}Prefabs/Structures/Military/Camps/Foundations/Foundation_ShelterStorage_01.et" {
+    coords 16.164 -0.191 8.112
+    angleY 111.502
+   }
+   $grp GenericEntity : "{34D385CE8A17BD61}Prefabs/Structures/Military/CamoNets/US/CamoNet_AssemblyKit_US.et" {
+    {
+     coords 5.371 0.028 -5.863
+     angleY 21.316
+    }
+    {
+     coords 13.991 -0.19 7.008
+     angleY -27.69
+    }
    }
    $grp StaticModelEntity : "{39C308BBB5945B85}Prefabs/Props/Military/Furniture/ChairMilitary_US_02.et" {
     {
@@ -803,6 +845,22 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
     coords -0.438 0.465 -11.11
     angleY -78.133
    }
+   $grp StaticModelEntity : "{46B036108B370553}Prefabs/Structures/Military/Camps/TentUS_01/Parts/TentUS_01_Construction01.et" {
+    {
+     coords 12.493 -0.191 8.263
+     angleY 111.326
+    }
+    {
+     coords 19.262 -0.183 5.584
+     angleX -88.85
+     angleY -0.317
+     angleZ -29.262
+    }
+    {
+     coords 16.393 -0.249 3.525
+     angleX -87.109
+    }
+   }
    GenericEntity Layer1 : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
     coords 0 0 0
     {
@@ -834,6 +892,28 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
         angleX 75.577
         angleY 71.308
         angleZ -27.3
+       }
+       $grp GenericEntity : "{5040D5BB29F06E43}Prefabs/Props/Military/Sandbags/Sandbag_01_single_plastic.et" {
+        {
+         coords -3.208 -0.116 1.122
+         angleX -2.086
+         angleY -141.201
+         angleZ 15.309
+        }
+        {
+         coords -2.885 0.275 1.362
+         angleX 15.876
+         angleY 91.269
+         angleZ -124.737
+        }
+        {
+         coords -2.423 -0.008 0.203
+         angleY 79.828
+        }
+        {
+         coords -2.73 -0.002 0.76
+         angleY 135.894
+        }
        }
        $grp GenericEntity : "{64A3A595C0A833AC}Prefabs/Props/Military/Sandbags/Sandbag_01_round_plastic.et" {
         {
@@ -917,6 +997,13 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
         {
          coords -2.558 -3.979 9.461
          angleY 169.156
+         {
+          GenericEntity {
+           ID "5D72D01CA4AF92BD"
+           coords 0.001 0 0.01
+           angleY 3.662
+          }
+         }
         }
         {
          coords 0.048 -3.979 9.961
@@ -925,6 +1012,11 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
           GenericEntity {
            coords 0.05 0 0.312
            angleY 9.097
+          }
+          GenericEntity {
+           ID "5D72D01CA4AF92BD"
+           coords 0.054 0 0.354
+           angleY 10.545
           }
          }
         }
@@ -1035,10 +1127,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
          angleY 90
         }
        }
-       GenericEntity : "{F88469B927C43440}Prefabs/Compositions/Misc/SubCompositions/Sandbag_round_Cluttered_US_01.et" {
-        coords -2.396 0 0.609
-        angleY -135
-       }
       }
      }
     }
@@ -1064,11 +1152,19 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
     coords -25.26 -1.35 -1.799
     angleY -57.408
    }
-   GenericEntity : "{B3E8911E396DE447}Prefabs/Props/Services/FireExtinguisherBox_01_Shovel.et" {
-    coords 1.405 0.13 -6.836
-    angleX 81.503
-    angleY 14.33
-    angleZ 179.213
+   $grp GenericEntity : "{B3E8911E396DE447}Prefabs/Props/Services/FireExtinguisherBox_01_Shovel.et" {
+    {
+     coords 1.405 0.13 -6.836
+     angleX 81.503
+     angleY 14.33
+     angleZ 179.213
+    }
+    {
+     coords 17.576 0.073 10.633
+     angleX 22.815
+     angleY -148.301
+     angleZ 171.318
+    }
    }
    GenericEntity : "{D174C165E264E087}Prefabs/Structures/Signs/Military/SignRectangle_01_140x100/Sign_BaseEntrance_US_01.et" {
     coords -15.561 0.8 5.965
@@ -1076,8 +1172,37 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
     angleY -96.571
     angleZ -8.71
    }
-   StaticModelEntity : "{E91113E3D09F83CD}Prefabs/Structures/Military/Camps/TentUS_01/TentUS_01_Assembled_camonet_foundation.et" {
-    coords 8.827 0.291 11.603
+   GameEntity : "{D9842C11742C00CF}Prefabs/Props/Civilian/Fireplace_01.et" {
+    components {
+     SCR_FireplaceComponent "{5876E7F288BF5C8E}" {
+      m_eInitialLightState OFF
+     }
+    }
+    coords -18.066 0.775 11.354
+    angleX 2.151
+   }
+   $grp GenericEntity : "{E4136E2E0BD66FC6}Prefabs/Props/Construction/HookMetal_01.et" {
+    {
+     coords 13.214 -0.191 8.047
+     angleX -0.186
+     angleY -32.401
+     angleZ 89.707
+    }
+    {
+     coords 13.435 -0.184 7.78
+     angleX -0.335
+     angleY -105.544
+     angleZ 90.093
+    }
+    {
+     coords 12.847 -0.194 7.639
+     angleX -0.231
+     angleY -138.327
+     angleZ 90.259
+    }
+   }
+   GenericEntity : "{EB21D26B8D5A3232}Prefabs/Items/Food/MRE.et" {
+    coords -20.995 0.835 13.378
    }
    GenericEntity : "{F2539FA5706E51E4}Prefabs/Items/Equipment/Binoculars/Binoculars_B12/Binoculars_B12.et" {
     coords -0.34 0.532 -10.69
