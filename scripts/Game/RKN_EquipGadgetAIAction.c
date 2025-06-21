@@ -9,8 +9,11 @@ class RKN_EquipGadgetAIAction : SCR_ScenarioFrameworkAIAction
 	override void OnActivate()
 	{
 		super.OnActivate();
-		foreach (SCR_ChimeraCharacter character : m_AIGroup.GetAIMembers())
+		array<AIAgent> agents = {};
+		m_AIGroup.GetAgents(agents);
+		foreach (AIAgent agent : agents)
 		{
+			IEntity character = agent.GetControlledEntity();
 			SCR_InventoryStorageManagerComponent inventoryManager = SCR_InventoryStorageManagerComponent.Cast(character.FindComponent(SCR_InventoryStorageManagerComponent));
 			CharacterControllerComponent characterController = CharacterControllerComponent.Cast(character.FindComponent(CharacterControllerComponent));
 			SCR_GadgetManagerComponent gadgetManager = SCR_GadgetManagerComponent.GetGadgetManager(character);

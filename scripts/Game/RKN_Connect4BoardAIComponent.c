@@ -20,6 +20,7 @@ class RKN_Connect4BoardAIComponent : ScriptComponent
 	RKN_Connect4BoardComponent m_Board;
 	bool m_bMyTurn;
 	bool m_bOpponentCheating;
+	const float INFINITY = 999999999; // float.INFINITY causes error when testing in workshop. So just use big number instead.
 	
 	override protected void OnPostInit(IEntity owner)
 	{
@@ -78,7 +79,7 @@ class RKN_Connect4BoardAIComponent : ScriptComponent
 		
 		m_bMyTurn = false;
 		int x = 0;
-		AlphaBetaMinMax(m_Board.m_aState, m_iMinMaxDepth, -float.INFINITY, float.INFINITY, m_iAIPlayer, x);
+		AlphaBetaMinMax(m_Board.m_aState, m_iMinMaxDepth, -INFINITY, INFINITY, m_iAIPlayer, x);
 		m_Board.AskPlaceStone(x, m_iAIPlayer);
 	}
 	
@@ -100,7 +101,7 @@ class RKN_Connect4BoardAIComponent : ScriptComponent
 		int throwAway;
 	    if (player == m_iAIPlayer)
 		{
-	        float max_eval = -float.INFINITY;
+	        float max_eval = -INFINITY;
 	        for (int x; x < 7; x++)
 			{
 				if (!CanPlace(state, x))
@@ -122,7 +123,7 @@ class RKN_Connect4BoardAIComponent : ScriptComponent
 		}
 	    else
 		{
-	        float min_eval = float.INFINITY;
+	        float min_eval = INFINITY;
 	        for (int x; x < 7; x++)
 			{
 				if (!CanPlace(state, x))

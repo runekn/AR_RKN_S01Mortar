@@ -8,7 +8,7 @@ Vehicle : "{47D94E1193A88497}Prefabs/Vehicles/Wheeled/M151A2/M151A2_transport.et
       "storage"
      }
      UIInfo UIInfo "{658451FDC5FA58A3}" {
-      Name "Take HE Crate"
+      Name "#AR-RKN_SP01M-Action_TakeCrate"
      }
      Duration 1
      m_sPrefabName "{645A1805E4C3BE31}Prefabs/Weapons/Ammo/RKN_Filled_AmmoBox_81mm_HE.et"

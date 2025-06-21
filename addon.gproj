@@ -70,14 +70,321 @@ GameProject {
    }
   }
   GameProjectConfig XBOX_ONE {
+   WidgetManagerSettings WidgetManagerSettings "{AC4BE58770485E02}" {
+    StringTables {
+     StringTableDefinition "{623861A11F9E63BE}" {
+     }
+     StringTableDefinition "{65AA7B270C2029E3}" {
+      StringTableSource "{FB4812A1917587FA}Language/rknMortar01.st"
+      Languages {
+       LanguageDefinition "{65AA7B270ED61509}" {
+        Code "cs_cz"
+        StringTableRuntime "{246E36F58FF2DA0F}Language/rknMortar01.cs_cz.conf"
+       }
+       LanguageDefinition "{65AA7B270ED6152E}" {
+        Code "de_de"
+        StringTableRuntime "{F1102CC69C51CB2F}Language/rknMortar01.de_de.conf"
+       }
+       LanguageDefinition "{65AA7B270ED6153D}" {
+        Code "en_us"
+        StringTableRuntime "{AFE0A68DF6A2CE2E}Language/rknMortar01.en_us.conf"
+       }
+       LanguageDefinition "{65AA7B270ED615C4}" {
+        Code "es_es"
+        StringTableRuntime "{6AACEB0418A0A531}Language/rknMortar01.es_es.conf"
+       }
+       LanguageDefinition "{65AA7B270ED615D1}" {
+        Code "fr_fr"
+        StringTableRuntime "{D1041E33FE234633}Language/rknMortar01.fr_fr.conf"
+       }
+       LanguageDefinition "{65AA7B270ED615DC}" {
+        Code "it_it"
+        StringTableRuntime "{511891075301C5CA}Language/rknMortar01.it_it.conf"
+       }
+       LanguageDefinition "{65AA7B270ED615E6}" {
+        Code "ja_jp"
+        StringTableRuntime "{41032C956D70F561}Language/rknMortar01.ja_jp.conf"
+       }
+       LanguageDefinition "{65AA7B270ED615F1}" {
+        Code "ko_kr"
+        StringTableRuntime "{E1BD0439FE5DF65E}Language/rknMortar01.ko_kr.conf"
+       }
+       LanguageDefinition "{65AA7B270ED615FA}" {
+        Code "pl_pl"
+        StringTableRuntime "{BDCCA2C340B26A22}Language/rknMortar01.pl_pl.conf"
+       }
+       LanguageDefinition "{65AA7B270ED61586}" {
+        Code "pt_br"
+        StringTableRuntime "{68BB380F7B4CA098}Language/rknMortar01.pt_br.conf"
+       }
+       LanguageDefinition "{65AA7B270ED61594}" {
+        Code "ru_ru"
+        StringTableRuntime "{3DFA2CA7E635C5EE}Language/rknMortar01.ru_ru.conf"
+       }
+       LanguageDefinition "{65AA7B270ED615A3}" {
+        Code "uk_ua"
+        StringTableRuntime "{B7A279518A1B7BBB}Language/rknMortar01.uk_ua.conf"
+       }
+       LanguageDefinition "{65AA7B270ED615AC}" {
+        Code "zh_cn"
+        StringTableRuntime "{6D12176CB3BBABA6}Language/rknMortar01.zh_cn.conf"
+       }
+      }
+     }
+    }
+   }
   }
   GameProjectConfig XBOX_SERIES {
+   WidgetManagerSettings WidgetManagerSettings "{AC4BE58770485E02}" {
+    StringTables {
+     StringTableDefinition "{65AA7B270A0FCE1C}" {
+      StringTableSource "{FB4812A1917587FA}Language/rknMortar01.st"
+      Languages {
+       LanguageDefinition "{65AA7B27052A260A}" {
+        Code "cs_cz"
+        StringTableRuntime "{246E36F58FF2DA0F}Language/rknMortar01.cs_cz.conf"
+       }
+       LanguageDefinition "{65AA7B27052A262D}" {
+        Code "de_de"
+        StringTableRuntime "{F1102CC69C51CB2F}Language/rknMortar01.de_de.conf"
+       }
+       LanguageDefinition "{65AA7B27052A2639}" {
+        Code "en_us"
+        StringTableRuntime "{AFE0A68DF6A2CE2E}Language/rknMortar01.en_us.conf"
+       }
+       LanguageDefinition "{65AA7B27052A26C3}" {
+        Code "es_es"
+        StringTableRuntime "{6AACEB0418A0A531}Language/rknMortar01.es_es.conf"
+       }
+       LanguageDefinition "{65AA7B27052A26CD}" {
+        Code "fr_fr"
+        StringTableRuntime "{D1041E33FE234633}Language/rknMortar01.fr_fr.conf"
+       }
+       LanguageDefinition "{65AA7B27052A26D6}" {
+        Code "it_it"
+        StringTableRuntime "{511891075301C5CA}Language/rknMortar01.it_it.conf"
+       }
+       LanguageDefinition "{65AA7B27052A26E1}" {
+        Code "ja_jp"
+        StringTableRuntime "{41032C956D70F561}Language/rknMortar01.ja_jp.conf"
+       }
+       LanguageDefinition "{65AA7B27052A26E8}" {
+        Code "ko_kr"
+        StringTableRuntime "{E1BD0439FE5DF65E}Language/rknMortar01.ko_kr.conf"
+       }
+       LanguageDefinition "{65AA7B27052A26F3}" {
+        Code "pl_pl"
+        StringTableRuntime "{BDCCA2C340B26A22}Language/rknMortar01.pl_pl.conf"
+       }
+       LanguageDefinition "{65AA7B27052A26FD}" {
+        Code "pt_br"
+        StringTableRuntime "{68BB380F7B4CA098}Language/rknMortar01.pt_br.conf"
+       }
+       LanguageDefinition "{65AA7B27052A2687}" {
+        Code "ru_ru"
+        StringTableRuntime "{3DFA2CA7E635C5EE}Language/rknMortar01.ru_ru.conf"
+       }
+       LanguageDefinition "{65AA7B27052A2692}" {
+        Code "uk_ua"
+        StringTableRuntime "{B7A279518A1B7BBB}Language/rknMortar01.uk_ua.conf"
+       }
+       LanguageDefinition "{65AA7B27052A269D}" {
+        Code "zh_cn"
+        StringTableRuntime "{6D12176CB3BBABA6}Language/rknMortar01.zh_cn.conf"
+       }
+      }
+     }
+    }
+   }
   }
   GameProjectConfig PS4 {
+   WidgetManagerSettings WidgetManagerSettings "{AC4BE58770485E02}" {
+    StringTables {
+     StringTableDefinition "{65AA7B270605EB0E}" {
+      StringTableSource "{FB4812A1917587FA}Language/rknMortar01.st"
+      Languages {
+       LanguageDefinition "{65AA7B27012E99A6}" {
+        Code "cs_cz"
+        StringTableRuntime "{246E36F58FF2DA0F}Language/rknMortar01.cs_cz.conf"
+       }
+       LanguageDefinition "{65AA7B27012E9850}" {
+        Code "de_de"
+        StringTableRuntime "{F1102CC69C51CB2F}Language/rknMortar01.de_de.conf"
+       }
+       LanguageDefinition "{65AA7B27012E985C}" {
+        Code "en_us"
+        StringTableRuntime "{AFE0A68DF6A2CE2E}Language/rknMortar01.en_us.conf"
+       }
+       LanguageDefinition "{65AA7B27012E9867}" {
+        Code "es_es"
+        StringTableRuntime "{6AACEB0418A0A531}Language/rknMortar01.es_es.conf"
+       }
+       LanguageDefinition "{65AA7B27012E986E}" {
+        Code "fr_fr"
+        StringTableRuntime "{D1041E33FE234633}Language/rknMortar01.fr_fr.conf"
+       }
+       LanguageDefinition "{65AA7B27012E987B}" {
+        Code "it_it"
+        StringTableRuntime "{511891075301C5CA}Language/rknMortar01.it_it.conf"
+       }
+       LanguageDefinition "{65AA7B27012E9802}" {
+        Code "ja_jp"
+        StringTableRuntime "{41032C956D70F561}Language/rknMortar01.ja_jp.conf"
+       }
+       LanguageDefinition "{65AA7B27012E980A}" {
+        Code "ko_kr"
+        StringTableRuntime "{E1BD0439FE5DF65E}Language/rknMortar01.ko_kr.conf"
+       }
+       LanguageDefinition "{65AA7B27012E9815}" {
+        Code "pl_pl"
+        StringTableRuntime "{BDCCA2C340B26A22}Language/rknMortar01.pl_pl.conf"
+       }
+       LanguageDefinition "{65AA7B27012E9821}" {
+        Code "pt_br"
+        StringTableRuntime "{68BB380F7B4CA098}Language/rknMortar01.pt_br.conf"
+       }
+       LanguageDefinition "{65AA7B27012E982A}" {
+        Code "ru_ru"
+        StringTableRuntime "{3DFA2CA7E635C5EE}Language/rknMortar01.ru_ru.conf"
+       }
+       LanguageDefinition "{65AA7B27012E9836}" {
+        Code "uk_ua"
+        StringTableRuntime "{B7A279518A1B7BBB}Language/rknMortar01.uk_ua.conf"
+       }
+       LanguageDefinition "{65AA7B27012E983E}" {
+        Code "zh_cn"
+        StringTableRuntime "{6D12176CB3BBABA6}Language/rknMortar01.zh_cn.conf"
+       }
+      }
+     }
+    }
+   }
   }
   GameProjectConfig PS5 {
+   WidgetManagerSettings WidgetManagerSettings "{AC4BE58770485E02}" {
+    StringTables {
+     StringTableDefinition "{65AA7B2703519965}" {
+      StringTableSource "{FB4812A1917587FA}Language/rknMortar01.st"
+      Languages {
+       LanguageDefinition "{65AA7B27027D4BFE}" {
+        Code "cs_cz"
+        StringTableRuntime "{246E36F58FF2DA0F}Language/rknMortar01.cs_cz.conf"
+       }
+       LanguageDefinition "{65AA7B27027D4B9F}" {
+        Code "de_de"
+        StringTableRuntime "{F1102CC69C51CB2F}Language/rknMortar01.de_de.conf"
+       }
+       LanguageDefinition "{65AA7B27027D4BA9}" {
+        Code "en_us"
+        StringTableRuntime "{AFE0A68DF6A2CE2E}Language/rknMortar01.en_us.conf"
+       }
+       LanguageDefinition "{65AA7B27027D4BB3}" {
+        Code "es_es"
+        StringTableRuntime "{6AACEB0418A0A531}Language/rknMortar01.es_es.conf"
+       }
+       LanguageDefinition "{65AA7B27027D4BBD}" {
+        Code "fr_fr"
+        StringTableRuntime "{D1041E33FE234633}Language/rknMortar01.fr_fr.conf"
+       }
+       LanguageDefinition "{65AA7B27027D4A48}" {
+        Code "it_it"
+        StringTableRuntime "{511891075301C5CA}Language/rknMortar01.it_it.conf"
+       }
+       LanguageDefinition "{65AA7B27027D4A50}" {
+        Code "ja_jp"
+        StringTableRuntime "{41032C956D70F561}Language/rknMortar01.ja_jp.conf"
+       }
+       LanguageDefinition "{65AA7B27027D4A5A}" {
+        Code "ko_kr"
+        StringTableRuntime "{E1BD0439FE5DF65E}Language/rknMortar01.ko_kr.conf"
+       }
+       LanguageDefinition "{65AA7B27027D4A63}" {
+        Code "pl_pl"
+        StringTableRuntime "{BDCCA2C340B26A22}Language/rknMortar01.pl_pl.conf"
+       }
+       LanguageDefinition "{65AA7B27027D4A6F}" {
+        Code "pt_br"
+        StringTableRuntime "{68BB380F7B4CA098}Language/rknMortar01.pt_br.conf"
+       }
+       LanguageDefinition "{65AA7B27027D4A78}" {
+        Code "ru_ru"
+        StringTableRuntime "{3DFA2CA7E635C5EE}Language/rknMortar01.ru_ru.conf"
+       }
+       LanguageDefinition "{65AA7B27027D4A07}" {
+        Code "uk_ua"
+        StringTableRuntime "{B7A279518A1B7BBB}Language/rknMortar01.uk_ua.conf"
+       }
+       LanguageDefinition "{65AA7B27027D4A0F}" {
+        Code "zh_cn"
+        StringTableRuntime "{6D12176CB3BBABA6}Language/rknMortar01.zh_cn.conf"
+       }
+      }
+     }
+    }
+   }
   }
   GameProjectConfig HEADLESS {
+   WidgetManagerSettings WidgetManagerSettings "{AC4BE58770485E02}" {
+    StringTables {
+     StringTableDefinition "{65AA7B273F153C04}" {
+      StringTableSource "{FB4812A1917587FA}Language/rknMortar01.st"
+      Languages {
+       LanguageDefinition "{65AA7B273E061479}" {
+        Code "cs_cz"
+        StringTableRuntime "{246E36F58FF2DA0F}Language/rknMortar01.cs_cz.conf"
+       }
+       LanguageDefinition "{65AA7B273E06141D}" {
+        Code "de_de"
+        StringTableRuntime "{F1102CC69C51CB2F}Language/rknMortar01.de_de.conf"
+       }
+       LanguageDefinition "{65AA7B273E061426}" {
+        Code "en_us"
+        StringTableRuntime "{AFE0A68DF6A2CE2E}Language/rknMortar01.en_us.conf"
+       }
+       LanguageDefinition "{65AA7B273E061431}" {
+        Code "es_es"
+        StringTableRuntime "{6AACEB0418A0A531}Language/rknMortar01.es_es.conf"
+       }
+       LanguageDefinition "{65AA7B273E06143A}" {
+        Code "fr_fr"
+        StringTableRuntime "{D1041E33FE234633}Language/rknMortar01.fr_fr.conf"
+       }
+       LanguageDefinition "{65AA7B273E0614C8}" {
+        Code "it_it"
+        StringTableRuntime "{511891075301C5CA}Language/rknMortar01.it_it.conf"
+       }
+       LanguageDefinition "{65AA7B273E0614D3}" {
+        Code "ja_jp"
+        StringTableRuntime "{41032C956D70F561}Language/rknMortar01.ja_jp.conf"
+       }
+       LanguageDefinition "{65AA7B273E0614DB}" {
+        Code "ko_kr"
+        StringTableRuntime "{E1BD0439FE5DF65E}Language/rknMortar01.ko_kr.conf"
+       }
+       LanguageDefinition "{65AA7B273E0614E3}" {
+        Code "pl_pl"
+        StringTableRuntime "{BDCCA2C340B26A22}Language/rknMortar01.pl_pl.conf"
+       }
+       LanguageDefinition "{65AA7B273E0614EE}" {
+        Code "pt_br"
+        StringTableRuntime "{68BB380F7B4CA098}Language/rknMortar01.pt_br.conf"
+       }
+       LanguageDefinition "{65AA7B273E0614F8}" {
+        Code "ru_ru"
+        StringTableRuntime "{3DFA2CA7E635C5EE}Language/rknMortar01.ru_ru.conf"
+       }
+       LanguageDefinition "{65AA7B273E061484}" {
+        Code "uk_ua"
+        StringTableRuntime "{B7A279518A1B7BBB}Language/rknMortar01.uk_ua.conf"
+       }
+       LanguageDefinition "{65AA7B273E06148D}" {
+        Code "zh_cn"
+        StringTableRuntime "{6D12176CB3BBABA6}Language/rknMortar01.zh_cn.conf"
+       }
+      }
+     }
+    }
+   }
   }
  }
 }

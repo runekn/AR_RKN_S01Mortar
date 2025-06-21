@@ -7,9 +7,12 @@ class RKN_ResupplyGroupAction : SCR_ScenarioFrameworkAIAction
 	override void OnActivate()
 	{
 		super.OnActivate();
-		foreach (SCR_ChimeraCharacter character : m_AIGroup.GetAIMembers())
+		
+		array<AIAgent> agents = {};
+		m_AIGroup.GetAgents(agents);
+		foreach (AIAgent agent : agents)
 		{
-			SCR_InventoryStorageManagerComponent inventoryManager = SCR_InventoryStorageManagerComponent.Cast(character.FindComponent(SCR_InventoryStorageManagerComponent));
+			SCR_InventoryStorageManagerComponent inventoryManager = SCR_InventoryStorageManagerComponent.Cast(agent.GetControlledEntity().FindComponent(SCR_InventoryStorageManagerComponent));
 			if (!inventoryManager)
 				return;
 			

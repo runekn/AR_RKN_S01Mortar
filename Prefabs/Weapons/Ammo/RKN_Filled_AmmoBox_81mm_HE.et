@@ -20,10 +20,11 @@ GenericEntity : "{3D5594CC62AAFB88}Prefabs/Props/Military/AmmoBoxes/AmmoBox_81mm
       "default"
      }
      UIInfo UIInfo "{658451FF4FBEE485}" {
-      Name "Take Shell"
+      Name "#AR-RKN_SP01M-Action_TakeShell"
       Icon "{55B22CEB4340AB0E}UI/Textures/UserActions/pickupaction.edds"
      }
      Duration 1
+     "Sort Priority" -1
      m_sPrefabName "{38BAE094333E31BF}Prefabs/Weapons/Ammo/Ammo_Shell_81mm_HE_M821.et"
     }
    }

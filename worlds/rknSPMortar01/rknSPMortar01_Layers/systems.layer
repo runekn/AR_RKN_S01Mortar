@@ -46,8 +46,8 @@ SCR_BaseGameMode GameModeSF1 : "{ECEEDB2D3737204B}Prefabs/Systems/ScenarioFramew
      SCR_BaseGameOverScreenInfo "{56D68C4268C953C8}" {
       m_OptionalParams SCR_BaseGameOverScreenInfoOptional "{56EEDCE2B507E635}" {
        m_sTitle "#AR-MatchResult_Draw-UC"
-       m_sSubtitle "NATO forces pushes back"
-       m_sDebriefing "Your response to enemy infiltrators was lacking. NATO forces must consolidate to respond to the threat."
+       m_sSubtitle "#AR-RKN_SP01M-End_Neutral_Subtitle"
+       m_sDebriefing "#AR-RKN_SP01M-End_Neutral_Desc"
       }
      }
      SCR_BaseGameOverScreenInfo "{659255A8178A080E}" {
@@ -55,8 +55,8 @@ SCR_BaseGameMode GameModeSF1 : "{ECEEDB2D3737204B}Prefabs/Systems/ScenarioFramew
       m_GameOverContentLayout "{E04021BC742BE432}UI/layouts/HUD/GameOver/EndScreen/EndScreenContent_Default.layout"
       m_OptionalParams SCR_BaseGameOverScreenInfoOptional "{659255A9282D6558}" {
        m_sTitle "#AR-MatchResult_Victory-UC"
-       m_sSubtitle "NATO forces sieze the day"
-       m_sDebriefing "Your effective response to the enemy infiltrators has disrupted USSR invasion plans. NATO forces remain in complete control of Everon."
+       m_sSubtitle "#AR-RKN_SP01M-End_Good_Subtitle"
+       m_sDebriefing "#AR-RKN_SP01M-End_Good_Desc"
       }
      }
      SCR_BaseGameOverScreenInfo "{659255A9140B2FC7}" {
@@ -64,8 +64,8 @@ SCR_BaseGameMode GameModeSF1 : "{ECEEDB2D3737204B}Prefabs/Systems/ScenarioFramew
       m_GameOverContentLayout "{E04021BC742BE432}UI/layouts/HUD/GameOver/EndScreen/EndScreenContent_Default.layout"
       m_OptionalParams SCR_BaseGameOverScreenInfoOptional "{659255A9282D6558}" {
        m_sTitle "#AR-MatchResult_Defeat-UC"
-       m_sSubtitle "NATO forces in jeopardy"
-       m_sDebriefing "Your response to enemy infiltrators was ineffective. NATO forces have lost too many assets for an effective response."
+       m_sSubtitle "#AR-RKN_SP01M-End_Bad_Subtitle"
+       m_sDebriefing "#AR-RKN_SP01M-End_Bad_Desc"
       }
      }
      SCR_BaseGameOverScreenInfo "{659255A86C4806CC}" {
@@ -73,8 +73,26 @@ SCR_BaseGameMode GameModeSF1 : "{ECEEDB2D3737204B}Prefabs/Systems/ScenarioFramew
       m_GameOverContentLayout "{E04021BC742BE432}UI/layouts/HUD/GameOver/EndScreen/EndScreenContent_Default.layout"
       m_OptionalParams SCR_BaseGameOverScreenInfoOptional "{659255AB942B1FD4}" {
        m_sTitle "#AR-MatchResult_Defeat-UC"
-       m_sSubtitle "Desertion will not be tolorated"
-       m_sDebriefing "Your mortar remains the best asset NATO forces on the island has available. Without it your comrades will fall to enemy infiltrators."
+       m_sSubtitle "#AR-RKN_SP01M-End_Desertion_Subtitle"
+       m_sDebriefing "#AR-RKN_SP01M-End_Desertion_Desc"
+      }
+     }
+     SCR_BaseGameOverScreenInfo "{65AA7B1CDD5A2D19}" {
+      m_GameOverScreenId END2
+      m_GameOverContentLayout "{E04021BC742BE432}UI/layouts/HUD/GameOver/EndScreen/EndScreenContent_Default.layout"
+      m_OptionalParams SCR_BaseGameOverScreenInfoOptional "{65AA7B1CDD5A2DC7}" {
+       m_sTitle "#AR-MatchResult_Defeat-UC"
+       m_sSubtitle "#AR-RKN_SP01M-End_Murder_Subtitle"
+       m_sDebriefing "#AR-RKN_SP01M-End_Murder_Desc"
+      }
+     }
+     SCR_BaseGameOverScreenInfo "{65AA7B1CCFB74082}" {
+      m_GameOverScreenId END3
+      m_GameOverContentLayout "{E04021BC742BE432}UI/layouts/HUD/GameOver/EndScreen/EndScreenContent_Default.layout"
+      m_OptionalParams SCR_BaseGameOverScreenInfoOptional "{65AA7B1CCFB740AF}" {
+       m_sTitle "#AR-MatchResult_Defeat-UC"
+       m_sSubtitle "#AR-RKN_SP01M-End_MortarDestroyed_Subtitle"
+       m_sDebriefing "#AR-RKN_SP01M-End_MortarDestroyed_Desc"
       }
      }
     }

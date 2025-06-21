@@ -1,6 +1,27 @@
 StringTable {
  ItemClassName "CustomStringTableItem"
  Items {
+  CustomStringTableItem "{65AA7B18416B086C}" {
+   Id "AR-RKN_SP01M-Action_Ack"
+   Target_en_us "Acknowledge"
+   Modified 1705687053
+   Author "Rune"
+   LastChanged "Rune"
+  }
+  CustomStringTableItem "{65AA7B18596686D0}" {
+   Id "AR-RKN_SP01M-Action_TakeCrate"
+   Target_en_us "Take HE Crate"
+   Modified 1705687010
+   Author "Rune"
+   LastChanged "Rune"
+  }
+  CustomStringTableItem "{65AA7B182CE9F35D}" {
+   Id "AR-RKN_SP01M-Action_TakeShell"
+   Target_en_us "Take Shell"
+   Modified 1705686977
+   Author "Rune"
+   LastChanged "Rune"
+  }
   CustomStringTableItem "{65944AE7FE18FA05}" {
    Id "AR-RKN_SP01M-Brief_Mission"
    Target_en_us "You crew a mortar and has been stationed on a hill outpost. The outpost is not yet finished, and your officer is on his way from the nearby camp with the shell ammunition."
@@ -14,6 +35,90 @@ StringTable {
    "The island of Everon is eyed by the USSR, and its Government has invited a small US force to build a camp there to encourage the soviet's better judgement. "\
    "Though the token force is small, as there is little interest in pulling from more important fronts to this ocean rock."
    Modified 1704224275
+   Author "Rune"
+   LastChanged "Rune"
+  }
+  CustomStringTableItem "{65AA7B1950669760}" {
+   Id "AR-RKN_SP01M-End_Bad_Desc"
+   Target_en_us "Your response to enemy infiltrators was ineffective. NATO forces have lost too many assets for an effective response."
+   Modified 1705686569
+   Author "Rune"
+   LastChanged "Rune"
+  }
+  CustomStringTableItem "{65AA7B195894A6C6}" {
+   Id "AR-RKN_SP01M-End_Bad_Subtitle"
+   Target_en_us "NATO forces in jeopardy"
+   Modified 1705686552
+   Author "Rune"
+   LastChanged "Rune"
+  }
+  CustomStringTableItem "{65AA7B1979618580}" {
+   Id "AR-RKN_SP01M-End_Desertion_Desc"
+   Target_en_us "Your mortar remains the best asset NATO forces on the island has available. Without it your comrades will fall to enemy infiltrators."
+   Modified 1705686610
+   Author "Rune"
+   LastChanged "Rune"
+  }
+  CustomStringTableItem "{65AA7B19416A787D}" {
+   Id "AR-RKN_SP01M-End_Desertion_Subtitle"
+   Target_en_us "Desertion will not be tolerated"
+   Modified 1705686596
+   Author "Rune"
+   LastChanged "Rune"
+  }
+  CustomStringTableItem "{65AA7B193388082D}" {
+   Id "AR-RKN_SP01M-End_Good_Desc"
+   Target_en_us "Your effective response to the enemy infiltrators has disrupted USSR invasion plans. NATO forces remain in complete control of Everon."
+   Modified 1705686514
+   Author "Rune"
+   LastChanged "Rune"
+  }
+  CustomStringTableItem "{65AA7B19373DD0FA}" {
+   Id "AR-RKN_SP01M-End_Good_Subtitle"
+   Target_en_us "NATO forces sieze the day"
+   Modified 1705686504
+   Author "Rune"
+   LastChanged "Rune"
+  }
+  CustomStringTableItem "{65AA7B1888212298}" {
+   Id "AR-RKN_SP01M-End_MortarDestroyed_Desc"
+   Target_en_us "Without the mortar you will be unable to support your allies."
+   Modified 1705686900
+   Author "Rune"
+   LastChanged "Rune"
+  }
+  CustomStringTableItem "{65AA7B1892A49C3A}" {
+   Id "AR-RKN_SP01M-End_MortarDestroyed_Subtitle"
+   Target_en_us "Mortar destroyed"
+   Modified 1705686685
+   Author "Rune"
+   LastChanged "Rune"
+  }
+  CustomStringTableItem "{65AA7B196A27F60F}" {
+   Id "AR-RKN_SP01M-End_Murder_Desc"
+   Target_en_us "WTF man?!"
+   Modified 1705686665
+   Author "Rune"
+   LastChanged "Rune"
+  }
+  CustomStringTableItem "{65AA7B196F23C17D}" {
+   Id "AR-RKN_SP01M-End_Murder_Subtitle"
+   Target_en_us "Traitors will not be tolerated"
+   Modified 1705686637
+   Author "Rune"
+   LastChanged "Rune"
+  }
+  CustomStringTableItem "{65AA7B19DD8A491A}" {
+   Id "AR-RKN_SP01M-End_Neutral_Desc"
+   Target_en_us "Your response to enemy infiltrators was lacking. NATO forces must consolidate to respond to the threat."
+   Modified 1705686313
+   Author "Rune"
+   LastChanged "Rune"
+  }
+  CustomStringTableItem "{65AA7B19BE636776}" {
+   Id "AR-RKN_SP01M-End_Neutral_Subtitle"
+   Target_en_us "NATO forces pushed back"
+   Modified 1705686287
    Author "Rune"
    LastChanged "Rune"
   }
@@ -45,6 +150,160 @@ StringTable {
    Id "AR-RKN_SP01M-Hint_Title"
    Target_en_us "Call for Fire"
    Modified 1704224424
+   Author "Rune"
+   LastChanged "Rune"
+  }
+  CustomStringTableItem "{65AAEC19FF84BF0A}" {
+   Id "AR-RKN_SP01M-Task_FM0_Desc"
+   Target_en_us "A nearby checkpoint is under attack. Spot the attackers and send some shells their way before it is too late."
+   Modified 1705701728
+   Author "Rune"
+   LastChanged "Rune"
+  }
+  CustomStringTableItem "{65AAEC19C7E8CEC6}" {
+   Id "AR-RKN_SP01M-Task_FM0_Title"
+   Target_en_us "Assist checkpoint guards"
+   Modified 1705701716
+   Author "Rune"
+   LastChanged "Rune"
+  }
+  CustomStringTableItem "{65AAEC19EAEB8D32}" {
+   Id "AR-RKN_SP01M-Task_FM1A_Desc"
+   Target_en_us "Charlie 2-2 is taking cover in a large building near Pennants Pass. They request an adjust fire mission 100M to their 310 bearing."
+   Modified 1705701769
+   Author "Rune"
+   LastChanged "Rune"
+  }
+  CustomStringTableItem "{65AAEC19EE89C270}" {
+   Id "AR-RKN_SP01M-Task_FM1A_Title"
+   Target_en_us "Charlie 2-2 Fire Mission"
+   Modified 1705701761
+   Author "Rune"
+   LastChanged "Rune"
+  }
+  CustomStringTableItem "{65AAEC1916295271}" {
+   Id "AR-RKN_SP01M-Task_FM1B_Desc"
+   Target_en_us "Alpha 2-2 is taking cover in a building complex called Camurac. They request an adjust fire mission 200M to their 065 bearing."
+   Modified 1705701802
+   Author "Rune"
+   LastChanged "Rune"
+  }
+  CustomStringTableItem "{65AAEC19181472E9}" {
+   Id "AR-RKN_SP01M-Task_FM1B_Title"
+   Target_en_us "Charlie 2-2 Fire Mission"
+   Modified 1705701792
+   Author "Rune"
+   LastChanged "Rune"
+  }
+  CustomStringTableItem "{65AAEC190132F7FF}" {
+   Id "AR-RKN_SP01M-Task_FM1C_Desc"
+   Target_en_us "Charlie 1 is requesting an adjust fire mission on grid 071 028"
+   Modified 1705701836
+   Author "Rune"
+   LastChanged "Rune"
+  }
+  CustomStringTableItem "{65AAEC19087BF0FA}" {
+   Id "AR-RKN_SP01M-Task_FM1C_Title"
+   Target_en_us "Charlie 2 Fire Mission"
+   Modified 1705701819
+   Author "Rune"
+   LastChanged "Rune"
+  }
+  CustomStringTableItem "{65AAEC192FAB107B}" {
+   Id "AR-RKN_SP01M-Task_FM2A_Desc"
+   Target_en_us "Alpha actual is requesting fire for effect, 300 meters south of center of Camp Pertrude."
+   Modified 1705701871
+   Author "Rune"
+   LastChanged "Rune"
+  }
+  CustomStringTableItem "{65AAEC1936044F10}" {
+   Id "AR-RKN_SP01M-Task_FM2A_Title"
+   Target_en_us "Alpha actual FIre mission"
+   Modified 1705701860
+   Author "Rune"
+   LastChanged "Rune"
+  }
+  CustomStringTableItem "{65AAEC195908BFF1}" {
+   Id "AR-RKN_SP01M-Task_FM2B_Desc"
+   Target_en_us "Alpha actual is requesting adjust fire mission, 200 meters north and 200 meters east of center of Camp Pertrude."
+   Modified 1705701906
+   Author "Rune"
+   LastChanged "Rune"
+  }
+  CustomStringTableItem "{65AAEC1921ADEA01}" {
+   Id "AR-RKN_SP01M-Task_FM2B_Title"
+   Target_en_us "Alpha actual FIre mission"
+   Modified 1705701893
+   Author "Rune"
+   LastChanged "Rune"
+  }
+  CustomStringTableItem "{65AAEC194E18B878}" {
+   Id "AR-RKN_SP01M-Task_FM2C_Desc"
+   Target_en_us "Alpha actual is requesting fire for effect, 300 meters south and 250 meters east of center of Camp Pertrude."
+   Modified 1705701931
+   Author "Rune"
+   LastChanged "Rune"
+  }
+  CustomStringTableItem "{65AAEC1950BEE5D9}" {
+   Id "AR-RKN_SP01M-Task_FM2C_Title"
+   Target_en_us "Alpha actual FIre mission"
+   Modified 1705701920
+   Author "Rune"
+   LastChanged "Rune"
+  }
+  CustomStringTableItem "{65AAEC197465DC12}" {
+   Id "AR-RKN_SP01M-Task_FM3A_Desc"
+   Target_en_us "Requests adjust fire mission at grid 092 015"
+   Modified 1705701973
+   Author "Rune"
+   LastChanged "Rune"
+  }
+  CustomStringTableItem "{65AAEC197E9E4456}" {
+   Id "AR-RKN_SP01M-Task_FM3A_Title"
+   Target_en_us "India 3 Fire mission"
+   Modified 1705701961
+   Author "Rune"
+   LastChanged "Rune"
+  }
+  CustomStringTableItem "{65AAEC1967E6FC8E}" {
+   Id "AR-RKN_SP01M-Task_FM3B_Desc"
+   Target_en_us "Bravo 2 requests fire for effect on the road near Cheval Gin Lodge"
+   Modified 1705702001
+   Author "Rune"
+   LastChanged "Rune"
+  }
+  CustomStringTableItem "{65AAEC196883DA9F}" {
+   Id "AR-RKN_SP01M-Task_FM3B_Title"
+   Target_en_us "Bravo 2 Fire mission"
+   Modified 1705701991
+   Author "Rune"
+   LastChanged "Rune"
+  }
+  CustomStringTableItem "{65AAEC1894419432}" {
+   Id "AR-RKN_SP01M-Task_FM3C_Desc"
+   Target_en_us "Bravo 2 requests adjust fire mission on a building north-west of Oar ridge"
+   Modified 1705702029
+   Author "Rune"
+   LastChanged "Rune"
+  }
+  CustomStringTableItem "{65AAEC189EE3EA77}" {
+   Id "AR-RKN_SP01M-Task_FM3C_Title"
+   Target_en_us "Bravo 2 Fire mission"
+   Modified 1705702019
+   Author "Rune"
+   LastChanged "Rune"
+  }
+  CustomStringTableItem "{65AAEC19DD7445E2}" {
+   Id "AR-RKN_SP01M-Task_Mortar_Desc"
+   Target_en_us "Locate the enemy mortar, and detroy it with counter-fire."
+   Modified 1705701669
+   Author "Rune"
+   LastChanged "Rune"
+  }
+  CustomStringTableItem "{65AAEC19B0B31447}" {
+   Id "AR-RKN_SP01M-Task_Mortar_Title"
+   Target_en_us "Counter the enemy mortar"
+   Modified 1705701638
    Author "Rune"
    LastChanged "Rune"
   }
@@ -736,8 +995,8 @@ StringTable {
   }
   CustomStringTableItem "{6596C0AAE6A5FF9B}" {
    Id "AR-RKN_SP01M-VA_HQ2"
-   Target_en_us "We're getting reports of sudden coordinates enemy action all throughout the northern half of the island."
-   Modified 1704378770
+   Target_en_us "We're getting reports of sudden coordinated enemy action all throughout the northern half of the island."
+   Modified 1705681576
    Author "Rune"
    LastChanged "Rune"
   }

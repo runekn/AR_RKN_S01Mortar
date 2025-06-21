@@ -1,3 +1,9 @@
+GenericEntity : "{3E413771E1834D2F}Prefabs/Weapons/Rifles/M16/Rifle_M16A2.et" {
+ coords 8633.615 289.974 4298.336
+ angleX 70.68
+ angleY -30.923
+ angleZ -85.306
+}
 GenericEntity : "{47DA8DDAA35089CC}Prefabs/Weapons/Ammo/RKN_Filled_AmmoBox_81mm_Smoke.et" {
  components {
   ActionsManagerComponent "{5476B36C403D4CC0}" {
@@ -75,6 +81,10 @@ $grp GenericEntity : "{645A1805E4C3BE31}Prefabs/Weapons/Ammo/RKN_Filled_AmmoBox_
 SCR_ScenarioFrameworkLogicCounter MissionCounter : "{6C1792C71DCAFD55}Prefabs/Systems/ScenarioFramework/Components/LogicCounter.et" {
  coords 8630.078 289.35 4304.938
  m_iCountTo 10
+}
+GameEntity : "{8266820FFDE17477}Prefabs/Characters/Handwear/Gloves_Wool_01/Gloves_Wool_01.et" {
+ coords 8640.819 290.538 4298.866
+ angleY 61.557
 }
 $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
  Insertion_area {
@@ -220,8 +230,8 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
             }
            }
           }
-          m_sTaskTitle "Assist checkpoint guards"
-          m_sTaskDescription "A nearby checkpoint is under attack. Spot the attackers and send some shells their way before it is too late."
+          m_sTaskTitle "#AR-RKN_SP01M-Task_FM0_Title"
+          m_sTaskDescription "#AR-RKN_SP01M-Task_FM0_Desc"
           m_aActionsOnFinished {
            SCR_ScenarioFrameworkActionSpawnObjects "{65765005B34FC1BB}" {
             m_bDebug 1
@@ -292,16 +302,13 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
               }
              }
             }
-            RKN_ActionBasedOnConditionLoop "{657292506EE4C852}" {
-             m_iDelayInSeconds 5
-             m_aActivationConditions {
-              RKN_AIGroupInjuredCondition "{657292506332742B}" {
-               m_fHealthMinimum 0
-               m_fHealthMaximum 0.9
+            RKN_OnDamageAction "{65AA7B1332A96494}" {
+             m_aDamageConditions {
+              RKN_AnyPlayerInstigatorDamageCondition "{65AA7B11EDCBADDD}" {
               }
              }
              m_aActions {
-              SCR_ScenarioFrameworkActionAI "{657292578F4EA5CC}" {
+              SCR_ScenarioFrameworkActionAI "{65AA7B11A60A0286}" {
                m_iMaxNumberOfActivations 1
                m_aAIActions {
                 SCR_ScenarioFrameworkAIAddWaypoint "{6564681E34324CA4}" {
@@ -314,8 +321,10 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
                 }
                }
               }
-              SCR_ScenarioFrameworkActionWaitAndExecute "{65790BFDC4E8D091}" {
+              SCR_ScenarioFrameworkActionWaitAndExecute "{65AA7B11DD5C6554}" {
+               m_iMaxNumberOfActivations 1
                m_iDelayInSeconds 10
+               m_iDelayInSecondsMax 0
                m_aActions {
                 RKN_VoiceOverPlayFiremissionSequence "{65790BFD2F93B408}" {
                  m_sVoiceOverDataConfig "{5319BF1C90A39E63}Configs/VoiceData/rknSPMortar01.conf"
@@ -574,11 +583,11 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
       m_eActivationConditionLogic OR
       m_aActions {
        SCR_ScenarioFrameworkActionWaitAndExecute "{6570ED3B5B9CFB24}" {
-        m_iDelayInSeconds 10
+        m_iDelayInSeconds 5
         m_aActions {
          SCR_ScenarioFrameworkActionEndMission "{6570ED3B561625CE}" {
           m_bOverrideGameOverType 1
-          m_eOverriddenGameOverType LOOSE
+          m_eOverriddenGameOverType END3
          }
         }
        }
@@ -734,13 +743,17 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
          "default"
         }
         UIInfo UIInfo "{656D252991594C58}" {
-         Name "Acknowledge"
+         Name "#AR-RKN_SP01M-Action_Ack"
         }
         Duration 3
         m_aActions {
          SCR_ScenarioFrameworkActionWaitAndExecute "{6572680ACAB39BAC}" {
           m_iDelayInSeconds 8
           m_aActions {
+           SCR_ScenarioFrameworkSetVariable "{65AA7B02E2BE6CE4}" {
+            m_sVariableName "OFFICER_FAIL_ON_DEATH"
+            m_sVariableValue "false"
+           }
            SCR_ScenarioFrameworkActionSpawnObjects "{6572680AFF03768C}" {
             m_aNameOfObjectsToSpawnOnActivation {
              "EnemyMortarLayer" "EnemyMortarExplosionLayer"
@@ -1380,8 +1393,8 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
          GenericEntity SlotTask1 : "{D5F479FD905C73C1}Prefabs/Systems/ScenarioFramework/Components/SlotTask.et" {
           components {
            SCR_ScenarioFrameworkSlotTask "{609CCA8A5D36FACD}" {
-            m_sTaskTitle "Charlie 2-2 Fire Mission"
-            m_sTaskDescription "Charlie 2-2 is taking cover in a large building near Pennants Pass. They request an adjust fire mission 100M to their 310 bearing."
+            m_sTaskTitle "#AR-RKN_SP01M-Task_FM1A_Title"
+            m_sTaskDescription "#AR-RKN_SP01M-Task_FM1A_Desc"
             m_aActionsOnCreated {
              RKN_VoiceOverPlayFiremissionSequence "{65750C9B8D5FC1DE}" {
               m_sVoiceOverDataConfig "{5319BF1C90A39E63}Configs/VoiceData/rknSPMortar01.conf"
@@ -1514,8 +1527,8 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
          GenericEntity SlotTask6 : "{D5F479FD905C73C1}Prefabs/Systems/ScenarioFramework/Components/SlotTask.et" {
           components {
            SCR_ScenarioFrameworkSlotTask "{609CCA8A5D36FACD}" {
-            m_sTaskTitle "Charlie 2-2 Fire Mission"
-            m_sTaskDescription "Alpha 2-2 is taking cover in a building complex called Camurac. They request an adjust fire mission 200M to their 065 bearing."
+            m_sTaskTitle "#AR-RKN_SP01M-Task_FM1B_Title"
+            m_sTaskDescription "#AR-RKN_SP01M-Task_FM1B_Desc"
             m_aActionsOnCreated {
              RKN_VoiceOverPlayFiremissionSequence "{65750C9BB7C63BF4}" {
               m_sVoiceOverDataConfig "{5319BF1C90A39E63}Configs/VoiceData/rknSPMortar01.conf"
@@ -1613,8 +1626,8 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
          GenericEntity SlotTask3 : "{D5F479FD905C73C1}Prefabs/Systems/ScenarioFramework/Components/SlotTask.et" {
           components {
            SCR_ScenarioFrameworkSlotTask "{609CCA8A5D36FACD}" {
-            m_sTaskTitle "Charlie 2 Fire Mission"
-            m_sTaskDescription "Charlie 1 is requesting an adjust fire mission on grid 071 028"
+            m_sTaskTitle "#AR-RKN_SP01M-Task_FM1C_Title"
+            m_sTaskDescription "#AR-RKN_SP01M-Task_FM1C_Desc"
             m_aActionsOnCreated {
              RKN_VoiceOverPlayFiremissionSequence "{65750C9BAC7B7406}" {
               m_sVoiceOverDataConfig "{5319BF1C90A39E63}Configs/VoiceData/rknSPMortar01.conf"
@@ -1783,8 +1796,8 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
          GenericEntity SlotTask5 : "{D5F479FD905C73C1}Prefabs/Systems/ScenarioFramework/Components/SlotTask.et" {
           components {
            SCR_ScenarioFrameworkSlotTask "{609CCA8A5D36FACD}" {
-            m_sTaskTitle "Alpha actual FIre mission"
-            m_sTaskDescription "Alpha actual is requesting fire for effect, 300 meters south and 250 meters east of center of Camp Pertrude."
+            m_sTaskTitle "#AR-RKN_SP01M-Task_FM2C_Title"
+            m_sTaskDescription "#AR-RKN_SP01M-Task_FM2C_Desc"
             m_aActionsOnCreated {
              RKN_VoiceOverPlayFiremissionSequence "{6576507504941F39}" {
               m_sVoiceOverDataConfig "{5319BF1C90A39E63}Configs/VoiceData/rknSPMortar01.conf"
@@ -1916,8 +1929,8 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
          GenericEntity SlotTask7 : "{D5F479FD905C73C1}Prefabs/Systems/ScenarioFramework/Components/SlotTask.et" {
           components {
            SCR_ScenarioFrameworkSlotTask "{609CCA8A5D36FACD}" {
-            m_sTaskTitle "Alpha actual FIre mission"
-            m_sTaskDescription "Alpha actual is requesting adjust fire mission, 200 meters north and 200 meters east of center of Camp Pertrude."
+            m_sTaskTitle "#AR-RKN_SP01M-Task_FM2B_Title"
+            m_sTaskDescription "#AR-RKN_SP01M-Task_FM2B_Desc"
             m_aActionsOnCreated {
              RKN_VoiceOverPlayFiremissionSequence "{6576507516C12E7E}" {
               m_sVoiceOverDataConfig "{5319BF1C90A39E63}Configs/VoiceData/rknSPMortar01.conf"
@@ -2044,8 +2057,8 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
          GenericEntity SlotTask8 : "{D5F479FD905C73C1}Prefabs/Systems/ScenarioFramework/Components/SlotTask.et" {
           components {
            SCR_ScenarioFrameworkSlotTask "{609CCA8A5D36FACD}" {
-            m_sTaskTitle "Alpha actual FIre mission"
-            m_sTaskDescription "Alpha actual is requesting fire for effect, 300 meters south of center of Camp Pertrude."
+            m_sTaskTitle "#AR-RKN_SP01M-Task_FM2A_Title"
+            m_sTaskDescription "#AR-RKN_SP01M-Task_FM2A_Desc"
             m_aActionsOnCreated {
              RKN_VoiceOverPlayFiremissionSequence "{657650751EC6D6E7}" {
               m_sVoiceOverDataConfig "{5319BF1C90A39E63}Configs/VoiceData/rknSPMortar01.conf"
@@ -2184,8 +2197,8 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
          GenericEntity SlotTask9 : "{D5F479FD905C73C1}Prefabs/Systems/ScenarioFramework/Components/SlotTask.et" {
           components {
            SCR_ScenarioFrameworkSlotTask "{609CCA8A5D36FACD}" {
-            m_sTaskTitle "Bravo 2 Fire mission"
-            m_sTaskDescription "Bravo 2 requests adjust fire mission on a building north-west of Oar ridge"
+            m_sTaskTitle "#AR-RKN_SP01M-Task_FM3C_Title"
+            m_sTaskDescription "#AR-RKN_SP01M-Task_FM3C_Desc"
             m_aActionsOnCreated {
              RKN_VoiceOverPlayFiremissionSequence "{657650752CD51F24}" {
               m_sVoiceOverDataConfig "{5319BF1C90A39E63}Configs/VoiceData/rknSPMortar01.conf"
@@ -2283,8 +2296,8 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
          GenericEntity SlotTask10 : "{D5F479FD905C73C1}Prefabs/Systems/ScenarioFramework/Components/SlotTask.et" {
           components {
            SCR_ScenarioFrameworkSlotTask "{609CCA8A5D36FACD}" {
-            m_sTaskTitle "India 3 Fire mission"
-            m_sTaskDescription "Requests adjust fire mission at grid 092 015"
+            m_sTaskTitle "#AR-RKN_SP01M-Task_FM3A_Title"
+            m_sTaskDescription "#AR-RKN_SP01M-Task_FM3A_Desc"
             m_aActionsOnCreated {
              RKN_VoiceOverPlayFiremissionSequence "{657650753C742654}" {
               m_sVoiceOverDataConfig "{5319BF1C90A39E63}Configs/VoiceData/rknSPMortar01.conf"
@@ -2377,8 +2390,8 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
          GenericEntity SlotTask11 : "{D5F479FD905C73C1}Prefabs/Systems/ScenarioFramework/Components/SlotTask.et" {
           components {
            SCR_ScenarioFrameworkSlotTask "{609CCA8A5D36FACD}" {
-            m_sTaskTitle "Bravo 2 Fire mission"
-            m_sTaskDescription "Bravo 2 requests fire for effect on the road near Cheval Gin Lodge"
+            m_sTaskTitle "#AR-RKN_SP01M-Task_FM3B_Title"
+            m_sTaskDescription "#AR-RKN_SP01M-Task_FM3B_Desc"
             m_aActionsOnCreated {
              RKN_VoiceOverPlayFiremissionSequence "{65765075343C0A2C}" {
               m_sVoiceOverDataConfig "{5319BF1C90A39E63}Configs/VoiceData/rknSPMortar01.conf"
@@ -2438,6 +2451,10 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
        components {
         SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
          m_aActivationActions {
+          SCR_ScenarioFrameworkSetVariable "{65AA7B020711525B}" {
+           m_sVariableName "OFFICER_FAIL_ON_DEATH"
+           m_sVariableValue "true"
+          }
           SCR_ScenarioFrameworkActionAI "{656468739AA5C6DC}" {
            m_Getter SCR_ScenarioFrameworkGetEntityByName "{65646873A1F37D8A}" {
             m_sEntityName "SlotAI1"
@@ -2480,6 +2497,25 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
                }
               }
              }
+            }
+           }
+          }
+          RKN_OnDamageAction "{65AA7B17010A3C3E}" {
+           m_aDamageConditions {
+            RKN_AnyPlayerInstigatorDamageCondition "{65AA7B16B8E34648}" {
+            }
+           }
+           m_aOtherConditions {
+            SCR_ScenarioFrameworkVariableValueCondition "{65AA7B16003C1C26}" {
+             m_sVariableName "OFFICER_FAIL_ON_DEATH"
+             m_sVariableValueToCheck "true"
+            }
+           }
+           m_aActions {
+            SCR_ScenarioFrameworkActionEndMission "{65AA7B16297C4A1E}" {
+             m_iMaxNumberOfActivations 1
+             m_bOverrideGameOverType 1
+             m_eOverriddenGameOverType END2
             }
            }
           }
@@ -2641,8 +2677,8 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
        GenericEntity SlotTask4 : "{D5F479FD905C73C1}Prefabs/Systems/ScenarioFramework/Components/SlotTask.et" {
         components {
          SCR_ScenarioFrameworkSlotTask "{609CCA8A5D36FACD}" {
-          m_sTaskTitle "Counter the enemy mortar"
-          m_sTaskDescription "Locate the enemy mortar, and detroy it with counter-fire."
+          m_sTaskTitle "#AR-RKN_SP01M-Task_Mortar_Title"
+          m_sTaskDescription "#AR-RKN_SP01M-Task_Mortar_Desc"
          }
         }
         coords 0 0 0
@@ -2664,30 +2700,13 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
                }
               }
              }
-             RKN_ActionBasedOnConditionLoop "{6570ED3C66ECBFC2}" {
-              m_iDelayInSeconds 5
-              m_aActivationConditions {
-               SCR_ScenarioFrameworEntitykDamageStateCondition "{6570ED3D95A9C92F}" {
-                m_Getter SCR_ScenarioFrameworkGetEntityByName "{6570C9B308507E1C}" {
-                 m_sEntityName "EnemyMortar"
-                }
-                m_eDamageState DESTROYED
-               }
-               SCR_ScenarioFrameworkMedicalCondition "{6570ED3D8D8BB84A}" {
-                m_Getter SCR_ScenarioFrameworkGetEntityByName "{6570C9B0E77D2986}" {
-                 m_sEntityName "EnemyMortarMan1"
-                }
-                m_aRequiredMedicalConditions {
-                 SCR_ScenarioFrameworkMedicalConditionHealth "{6570C9B0E38D6767}" {
-                  m_fHealthMinimum 0
-                  m_fHealthMaximum 0.968
-                 }
-                }
+             RKN_OnDamageAction "{65AA7B1574879838}" {
+              m_aDamageConditions {
+               RKN_AnyPlayerInstigatorDamageCondition "{65AA7B1572A546EA}" {
                }
               }
-              m_eActivationConditionLogic OR
               m_aActions {
-               SCR_ScenarioFrameworkActionAI "{6570ED3D83D72945}" {
+               SCR_ScenarioFrameworkActionAI "{65AA7B15628627C4}" {
                 m_iMaxNumberOfActivations 1
                 m_Getter SCR_ScenarioFrameworkGetEntityByName "{6570ED3064330215}" {
                  m_sEntityName "EnemyMortarMan"
@@ -2703,10 +2722,16 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
                  }
                 }
                }
-               SCR_ScenarioFrameworkActionChangeTaskState "{6570ED3DB3FB6224}" {
+               SCR_ScenarioFrameworkActionWaitAndExecute "{65AA7B1496F4AF15}" {
                 m_iMaxNumberOfActivations 1
-                m_Getter SCR_ScenarioFrameworkGetTask "{6564682FD958B403}" {
-                 m_sLayerTaskName "EnemyMortarTask_layer"
+                m_iDelayInSeconds 5
+                m_aActions {
+                 SCR_ScenarioFrameworkActionChangeTaskState "{65AA7B148DE5337F}" {
+                  m_iMaxNumberOfActivations 1
+                  m_Getter SCR_ScenarioFrameworkGetTask "{6564682FD958B403}" {
+                   m_sLayerTaskName "EnemyMortarTask_layer"
+                  }
+                 }
                 }
                }
               }
@@ -3029,5 +3054,21 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
     }
    }
   }
+ }
+}
+GenericEntity : "{E8F00BF730225B00}Prefabs/Weapons/Grenades/Grenade_M67.et" {
+ coords 8644.662 289.662 4294.276
+ angleX -0.186
+ angleY 43.315
+}
+$grp GenericEntity : "{FB5EB0F6D447E858}Prefabs/Weapons/Magazines/Magazine_556x45_STANAG_30rnd_M193_Ball.et" {
+ {
+  coords 8641.217 290.483 4295.478
+  angleZ -90
+ }
+ {
+  coords 8641.239 290.5 4295.588
+  angleY -75.665
+  angleZ -84.692
  }
 }
