@@ -78,7 +78,7 @@ AudioClass {
     2
    }
    inputvalues {
-    6
+    9
    }
    inputvaluesmin {
     0
@@ -254,7 +254,7 @@ AudioClass {
    id 96265
    name "SOUND_FIREMISSION_TIMEOUT_1"
    version 5
-   tl -1342.273 2335.449
+   tl -1342.273 2334.449
    parent "{64A825EC9DC1123C}Sounds/_SharedData/Configs/Sound/Tutorial/Sound_Tutorial_VO_Radio.conf"
    ins {
     ConnectionsClass connections {
@@ -274,7 +274,7 @@ AudioClass {
    id 99337
    name "SOUND_FIREMISSION_SUCCESS_2"
    version 5
-   tl -1342.273 3076.277
+   tl -1341.403 3076.277
    parent "{64A825EC9DC1123C}Sounds/_SharedData/Configs/Sound/Tutorial/Sound_Tutorial_VO_Radio.conf"
    ins {
     ConnectionsClass connections {
@@ -3595,7 +3595,7 @@ AudioClass {
      Index 7
     }
     AudioBankSampleClass Sample {
-     Filename "{E89FA447A7B7E453}Sounds/Samples/FIREMISSION_3C/SOUND_FIREMISSION_3C_TIMEOUT_1.wav"
+     Filename "{52CC6BCC2DC70E11}Sounds/Samples/FIREMISSION_3B/SOUND_FIREMISSION_3B_TIMEOUT_1.wav"
      Index 8
     }
     AudioBankSampleClass Sample {
@@ -3626,7 +3626,7 @@ AudioClass {
      Filename "{64EC0FA93676A9AB}Sounds/Samples/FIREMISSION_1A/SOUND_FIREMISSION_1A_SUCCESS_2.wav"
     }
     AudioBankSampleClass Sample {
-     Filename "{E8E8BEDE010DA1FE}Sounds/Samples/FIREMISSION_1B/SOUND_FIREMISSION_1B_SUCCESS_2.wav"
+     Filename "{14219D70A452FC18}Sounds/Samples/FIREMISSION_1A/SOUND_FIREMISSION_1A_SUCCESS_4.wav"
      Index 1
     }
     AudioBankSampleClass Sample {

@@ -1,7 +1,7 @@
 GameProject {
  ID "rknSPMortar01"
  GUID "654E50B58B932C32"
- TITLE "rkn_SPMortar01"
+ TITLE "rkn_SP01Mortar"
  Dependencies {
   "58D0FB3206B6F859"
  }

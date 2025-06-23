@@ -83,8 +83,8 @@ SCR_ScenarioFrameworkLogicCounter MissionCounter : "{6C1792C71DCAFD55}Prefabs/Sy
  m_iCountTo 10
 }
 GameEntity : "{8266820FFDE17477}Prefabs/Characters/Handwear/Gloves_Wool_01/Gloves_Wool_01.et" {
- coords 8640.819 290.538 4298.866
- angleY 61.557
+ coords 8641.257 290.538 4298.861
+ angleY -149.682
 }
 $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
  Insertion_area {
@@ -700,11 +700,11 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
    }
    $grp GenericEntity : "{34D385CE8A17BD61}Prefabs/Structures/Military/CamoNets/US/CamoNet_AssemblyKit_US.et" {
     {
-     coords 5.371 0.028 -5.863
-     angleY 21.316
+     coords 6.099 0.028 -8.109
+     angleY 89.506
     }
     {
-     coords 13.991 -0.19 7.008
+     coords 14.357 -0.19 7.685
      angleY -27.69
     }
    }
@@ -864,13 +864,13 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
      angleY 111.326
     }
     {
-     coords 19.262 -0.183 5.584
+     coords 19.289 -0.172 6.122
      angleX -88.85
      angleY -0.317
      angleZ -29.262
     }
     {
-     coords 16.393 -0.249 3.525
+     coords 16.42 -0.238 4.062
      angleX -87.109
     }
    }
@@ -2573,6 +2573,21 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
          }
         }
         coords 319.92 38.563 -224.484
+       }
+       SlotWaypoint35 {
+        components {
+         SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+          m_Waypoint SCR_ScenarioFrameworkWaypointMove "{6566607FACE1B482}" {
+           m_aSettings {
+            SCR_AIGroupCharactersMovementSpeedSetting "{657A7358B565934B}" {
+             m_eSpeed WALK
+            }
+           }
+           m_fCompletionRadius 2
+          }
+         }
+        }
+        coords 282.091 39.802 -218.314
        }
       }
      }
