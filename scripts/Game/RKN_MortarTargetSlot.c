@@ -56,12 +56,16 @@ class RKN_MortarTargetSlot : SCR_ScenarioFrameworkSlotBase
 	[Attribute(desc: "Config for the subtitles and sound event names for fire adjustments", UIWidgets.Auto, category: "Mortar target")]
 	ResourceName m_sAdjustSoundConfig;
 	
+	[Attribute()]
+	string m_sIndicatorEntityName;
+	
 	int	m_iDebugOuterShapeColor = ARGB(32, 32, 255, 255);
 	int m_iSplashesOnTarget;
 	int m_iSplashes;
 	bool m_bAdjustFire;
 	bool m_bDeactivated;
 	ref RKN_MortarTargetVoiceLines m_sAdjustSounds;
+	RKN_MortarTargetIndicatorComponent m_IndicatorComp;
 	
 	//------------------------------------------------------------------------------------------------
 	override bool InitOtherThings()
@@ -90,6 +94,24 @@ class RKN_MortarTargetSlot : SCR_ScenarioFrameworkSlotBase
 			if (m_iTimeoutInSecondsMax > m_iTimeoutInSeconds)
 				delay = Math.RandomIntInclusive(m_iTimeoutInSeconds, m_iTimeoutInSecondsMax);
 			SCR_ScenarioFrameworkSystem.GetCallQueuePausable().CallLater(ExecuteTimeoutActions, delay * 1000, false);
+		}
+	
+		if (m_sIndicatorEntityName && m_sIndicatorEntityName != "")
+		{
+			World world = GetGame().GetWorld();
+			IEntity indicator = world.FindEntityByName(m_sIndicatorEntityName);
+			if (indicator)
+			{
+				m_IndicatorComp = RKN_MortarTargetIndicatorComponent.Cast(indicator.FindComponent(RKN_MortarTargetIndicatorComponent));
+				if (!m_IndicatorComp)
+				{
+					Print("Indicator entity has no indicator component!", LogLevel.ERROR);
+				}
+			}
+			else
+			{
+				Print("Indicator entity not found: " + m_sIndicatorEntityName, LogLevel.ERROR);
+			}
 		}
 		
 		return super.InitOtherThings();
@@ -148,6 +170,7 @@ class RKN_MortarTargetSlot : SCR_ScenarioFrameworkSlotBase
 				PlayCorrection(m_sAdjustSounds.m_sAdjustHitSoundEvent, m_sAdjustSounds.m_sAdjustHitSubtitles);
 			}
 			m_iSplashesOnTarget++;
+			NotifyIndicator(hit);
 			if (++m_iSplashes >= m_iRequiredSplashes)
 			{
 				ExecuteActions();
@@ -224,6 +247,7 @@ class RKN_MortarTargetSlot : SCR_ScenarioFrameworkSlotBase
 		}
 		else
 		{
+			NotifyIndicator(hit);
 			if (++m_iSplashes >= m_iRequiredSplashes)
 			{
 				ExecuteActions();
@@ -257,6 +281,9 @@ class RKN_MortarTargetSlot : SCR_ScenarioFrameworkSlotBase
 		
 		if (m_iTimeoutInSeconds > 0)
 			SCR_ScenarioFrameworkSystem.GetCallQueuePausable().Remove(ExecuteTimeoutActions);
+		
+		if (m_IndicatorComp)
+			m_IndicatorComp.ShowIndicators(GetOwner().GetOrigin(), m_iTargetRadius);
 		
 		Deactivate();
 	}
@@ -332,5 +359,12 @@ class RKN_MortarTargetSlot : SCR_ScenarioFrameworkSlotBase
 		SCR_ScenarioFrameworkParam<IEntity> entityWrapper = SCR_ScenarioFrameworkParam<IEntity>.Cast(m_SoundActorGetter.Get());
 		SCR_VoiceoverSystem.GetInstance().RegisterActor(entityWrapper.GetValue());
 		SCR_VoiceoverSystem.GetInstance().PlayCustomLine(soundEventName, subtitle, entityWrapper.GetValue(), string.Empty, false);
+	}
+	
+	private void NotifyIndicator(vector hit)
+	{
+		if (!m_IndicatorComp)
+			return;
+		m_IndicatorComp.RecordHit(hit);
 	}
 }

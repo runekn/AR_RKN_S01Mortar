@@ -107,6 +107,17 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
            RKN_PlayerSitAction "{65A861C062EFAF22}" {
             m_bDebug 1
            }
+           SCR_ScenarioFrameworkActionWaitAndExecute "{65B148C5242EE641}" {
+            m_iDelayInSeconds 5
+            m_aActions {
+             SCR_ScenarioFrameworkActionShowHint "{65B148C5580ADBDF}" {
+              m_sTitle "#AR-RKN_SP01M-Hint_Stand_Title"
+              m_sActionName "CharacterJump"
+              m_sActionText "#AR-RKN_SP01M-Hint_Stand_Text"
+              m_iTimeout 10
+             }
+            }
+           }
           }
          }
         }
@@ -1237,9 +1248,9 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
          m_iDelayInSeconds 4
          m_aActions {
           SCR_ScenarioFrameworkActionShowHint "{657EF7DEFD57B2D7}" {
-           m_sTitle "#AR-RKN_SP01M-Hint_Title"
-           m_sText "#AR-RKN_SP01M-Hint_Text"
-           m_iTimeout 60
+           m_sTitle "#AR-RKN_SP01M-Hint_CallForFire_Title"
+           m_sText "#AR-RKN_SP01M-Hint_CallForFire_Text"
+           m_iTimeout 10
           }
          }
         }
@@ -1352,6 +1363,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
              m_SoundActorGetter RKN_GetRadioEntity "{65750C8C60600F85}" {
              }
              m_sAdjustSoundConfig "{DCB24F7587E03517}Configs/VoiceData/FireMission1A.conf"
+             m_sIndicatorEntityName "IndicatorCanvas"
             }
            }
            coords -544.922 -46.304 -2010.984
@@ -1486,6 +1498,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
              m_SoundActorGetter RKN_GetRadioEntity "{65750C8D9CA6C280}" {
              }
              m_sAdjustSoundConfig "{DCB24F7587E03517}Configs/VoiceData/FireMission1A.conf"
+             m_sIndicatorEntityName "IndicatorCanvas"
             }
            }
            coords -1827.822 -248.939 -1098.487
@@ -1619,6 +1632,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
             m_SoundActorGetter RKN_GetRadioEntity "{65750C8D99920623}" {
             }
             m_sAdjustSoundConfig "{765221AE35B0D36C}Configs/VoiceData/FireMission1C.conf"
+            m_sIndicatorEntityName "IndicatorCanvas"
            }
           }
           coords -1444.784 -128.37 -1511.238
@@ -1756,6 +1770,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
               }
              }
              m_bRequestAdjustFire 0
+             m_sIndicatorEntityName "IndicatorCanvas"
             }
            }
            coords -1370.23 -120.206 -337
@@ -1889,6 +1904,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
              m_SoundActorGetter RKN_GetRadioEntity "{65750C8D9444E39C}" {
              }
              m_sAdjustSoundConfig "{D6171F3831F0C690}Configs/VoiceData/FireMission2B.conf"
+             m_sIndicatorEntityName "IndicatorCanvas"
             }
            }
            coords -1410.897 -164.989 232.889
@@ -2017,6 +2033,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
               }
              }
              m_bRequestAdjustFire 0
+             m_sIndicatorEntityName "IndicatorCanvas"
             }
            }
            coords -1127.555 -77.525 -339.447
@@ -2190,6 +2207,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
             m_SoundActorGetter RKN_GetRadioEntity "{65750C8D804E99C0}" {
             }
             m_sAdjustSoundConfig "{7CF771E383A020EB}Configs/VoiceData/FireMission3C.conf"
+            m_sIndicatorEntityName "IndicatorCanvas"
            }
           }
           coords 2329.271 -270.879 -1415.314
@@ -2289,6 +2307,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
             m_SoundActorGetter RKN_GetRadioEntity "{65750C8D85C7EEAF}" {
             }
             m_sAdjustSoundConfig "{11DB8FA5C4A6859C}Configs/VoiceData/FireMission3A.conf"
+            m_sIndicatorEntityName "IndicatorCanvas"
            }
           }
           coords 606.293 -203.345 -2753.92
@@ -2383,6 +2402,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
              }
             }
             m_bRequestAdjustFire 0
+            m_sIndicatorEntityName "IndicatorCanvas"
            }
           }
           coords 1269.456 4.753 -1722.883
@@ -2425,7 +2445,17 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
       m_aPrefabFilter {
        SCR_ScenarioFrameworkPrefabFilterCountNoInheritance "{65646870E8398440}" {
         m_sPrefabName "{645A1805E4C3BE31}Prefabs/Weapons/Ammo/RKN_Filled_AmmoBox_81mm_HE.et"
-        m_iPrefabCount 9
+        m_iPrefabCount 8
+       }
+      }
+     }
+     SCR_ScenarioFrameworkActionAddItemToInventory "{65B148C3C6A47266}" {
+      m_Getter SCR_ScenarioFrameworkGetEntityByName "{65B148C3C6A4721D}" {
+       m_sEntityName "RKN_M151A1"
+      }
+      m_aPrefabFilter {
+       SCR_ScenarioFrameworkPrefabFilterCountNoInheritance "{65B148C3C6A4721E}" {
+        m_sPrefabName "{47DA8DDAA35089CC}Prefabs/Weapons/Ammo/RKN_Filled_AmmoBox_81mm_Smoke.et"
        }
       }
      }
@@ -2479,6 +2509,13 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
                m_PlayerGetter SCR_ScenarioFrameworkGetPlayerEntity "{65750C848F3FE35B}" {
                }
                m_bPlayImmediately 0
+               m_aActions {
+                SCR_ScenarioFrameworkActionShowHint "{65B148C0D6F7C931}" {
+                 m_sTitle "#AR-RKN_SP01M-Hint_Ack_Title"
+                 m_sText "#AR-RKN_SP01M-Hint_Ack_Text"
+                 m_iTimeout 10
+                }
+               }
               }
              }
             }
@@ -3071,6 +3108,17 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
   }
  }
 }
+GenericEntity IndicatorCanvas : "{DCBC472CDA3EA9B2}Prefabs/Props/Civilian/WallMap_01.et" {
+ components {
+  RKN_MortarTargetIndicatorComponent "{65AF22E82A88F96E}" {
+   m_HitDecal "{236B15B6CCF854FA}Assets/Indicator/TargetDot.emat"
+   m_RadiusDecal "{DC34E38119C61257}Assets/Indicator/TargetCircle.emat"
+  }
+ }
+ coords 8643.311 290.637 4294.921
+ angleY -79.828
+ scale 0.8
+}
 GenericEntity : "{E8F00BF730225B00}Prefabs/Weapons/Grenades/Grenade_M67.et" {
  coords 8644.662 289.662 4294.276
  angleX -0.186
@@ -3078,11 +3126,11 @@ GenericEntity : "{E8F00BF730225B00}Prefabs/Weapons/Grenades/Grenade_M67.et" {
 }
 $grp GenericEntity : "{FB5EB0F6D447E858}Prefabs/Weapons/Magazines/Magazine_556x45_STANAG_30rnd_M193_Ball.et" {
  {
-  coords 8641.217 290.483 4295.478
+  coords 8640.974 290.483 4295.848
   angleZ -90
  }
  {
-  coords 8641.239 290.5 4295.588
+  coords 8641.475 290.474 4295.812
   angleY -75.665
   angleZ -84.692
  }

@@ -1,0 +1,4 @@
+MatPBRBasic {
+ BCRMap "{797AEB65EC84D7F5}Assets/Props/Civilian/PaperHolder_01/Data/texture.edds"
+ NMOMap "{A8C362BDDA3D073A}Assets/Props/Civilian/PaperHolder_01/Data/PaperHolder_01_NMO.edds"
+}

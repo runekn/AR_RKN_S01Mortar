@@ -8,10 +8,20 @@ Vehicle : "{47D94E1193A88497}Prefabs/Vehicles/Wheeled/M151A2/M151A2_transport.et
       "storage"
      }
      UIInfo UIInfo "{658451FDC5FA58A3}" {
-      Name "#AR-RKN_SP01M-Action_TakeCrate"
+      Name "#AR-RKN_SP01M-Action_TakeHECrate"
      }
      Duration 1
      m_sPrefabName "{645A1805E4C3BE31}Prefabs/Weapons/Ammo/RKN_Filled_AmmoBox_81mm_HE.et"
+    }
+    RKN_TakePrefabAction "{65B148C062AA1EBC}" {
+     ParentContextList {
+      "storage"
+     }
+     UIInfo UIInfo "{65B148C062AA0173}" {
+      Name "#AR-RKN_SP01M-Action_TakeSmokeCrate"
+     }
+     Duration 1
+     m_sPrefabName "{47DA8DDAA35089CC}Prefabs/Weapons/Ammo/RKN_Filled_AmmoBox_81mm_Smoke.et"
     }
    }
   }

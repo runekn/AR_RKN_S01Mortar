@@ -9,9 +9,9 @@ StringTable {
    LastChanged "Rune"
   }
   CustomStringTableItem "{65AA7B18596686D0}" {
-   Id "AR-RKN_SP01M-Action_TakeCrate"
+   Id "AR-RKN_SP01M-Action_TakeHECrate"
    Target_en_us "Take HE Crate"
-   Modified 1705687010
+   Modified 1706118266
    Author "Rune"
    LastChanged "Rune"
   }
@@ -19,6 +19,44 @@ StringTable {
    Id "AR-RKN_SP01M-Action_TakeShell"
    Target_en_us "Take Shell"
    Modified 1705686977
+   Author "Rune"
+   LastChanged "Rune"
+  }
+  CustomStringTableItem "{65B148C381E4405B}" {
+   Id "AR-RKN_SP01M-Action_TakeSmokeCrate"
+   Target_en_us "Take Smoke Crate"
+   Modified 1706118294
+   Author "Rune"
+   LastChanged "Rune"
+  }
+  CustomStringTableItem "{65946438C29D709E}" {
+   Id "AR-RKN_SP01M-Brief_CallForFire_Text"
+   Target_en_us "When requested a firemission, the requester will first provide the target location. This can be in the form of "\
+   " - Grid: Corrdinates as refereced on your map"\
+   " - Polar: Bearing from requester's position. Requires knowing the requester's position."\
+   " - Shift from known point: Some distance away from a named location on your map."\
+   ""\
+   "Another piece of info is whether the requester want you to strike the target with effect (5 shells) right away, called \"Fire for effect\", or act as observer and guide you unto target. This is called \"Adjust fire\". "\
+   "  Additional information may also be given including shell type, and recommended impact trajectory angle (based on surrounding terrain)."\
+   ""\
+   "<b>Adjust fire</b>"\
+   "During adjustment phase, the observer will expect one shell at a time. Upon impact the observer will give corrections. These correction are usually based on the observer's reference."\
+   ""\
+   "Examples "\
+   " - \"Drop 300 meters, left 50 meters\": target 300 meters closer to the observer, and 50 meters to his left."\
+   " - \"Add 100 meters\": target 100 meters further away from the observer."\
+   ""\
+   "Though keep an ear to how the observer gives the correction, since NATO is stretched thin and correct procedures may not have been trained."\
+   "  In case the initial target location info did not yield the position of the observer, and adjustments are called in a polar manner, then the adjustments will be preceded by the bearing from observer to target."\
+   "  Once a shell has found the target during adjustment, the observer will call \"Fire for effect\", after which 5 shells are expected with no further adjustments."
+   Modified 1706117584
+   Author "Rune"
+   LastChanged "Rune"
+  }
+  CustomStringTableItem "{65946438CA04E7E5}" {
+   Id "AR-RKN_SP01M-Brief_CallForFire_Title"
+   Target_en_us "Call for Fire"
+   Modified 1706117588
    Author "Rune"
    LastChanged "Rune"
   }
@@ -122,34 +160,45 @@ StringTable {
    Author "Rune"
    LastChanged "Rune"
   }
-  CustomStringTableItem "{65946438C29D709E}" {
-   Id "AR-RKN_SP01M-Hint_Text"
-   Target_en_us "When requested a firemission, the requester will first provide the target location. This can be in the form of "\
-   " - Grid: Corrdinates as refereced on your map"\
-   " - Polar: Bearing from requester's position. Requires knowing the requester's position."\
-   " - Shift from known point: Some distance away from a named location on your map."\
-   ""\
-   "Another piece of info is whether the requester want you to strike the target with effect (5 shells) right away, called \"Fire for effect\", or act as observer and guide you unto target. This is called \"Adjust fire\". "\
-   "  Additional information may also be given including shell type, and recommended impact trajectory angle (based on surrounding terrain)."\
-   ""\
-   "<b>Adjust fire</b>"\
-   "During adjustment phase, the observer will expect one shell at a time. Upon impact the observer will give corrections. These correction are usually based on the observer's reference."\
-   ""\
-   "Examples "\
-   " - \"Drop 300 meters, left 50 meters\": target 300 meters closer to the observer, and 50 meters to his left."\
-   " - \"Add 100 meters\": target 100 meters further away from the observer."\
-   ""\
-   "Though keep an ear to how the observer gives the correction, since NATO is stretched thin and correct procedures may not have been trained."\
-   "  In case the initial target location info did not yield the position of the observer, and adjustments are called in a polar manner, then the adjustments will be preceded by the bearing from observer to target."\
-   "  Once a shell has found the target during adjustment, the observer will call \"Fire for effect\", after which 5 shells are expected with no further adjustments."
-   Modified 1704226282
+  CustomStringTableItem "{65B148C17D9555AF}" {
+   Id "AR-RKN_SP01M-Hint_Ack_Text"
+   Target_en_us "Find and interact with the radio to acknowledge."
+   Modified 1706120206
    Author "Rune"
    LastChanged "Rune"
   }
-  CustomStringTableItem "{65946438CA04E7E5}" {
-   Id "AR-RKN_SP01M-Hint_Title"
+  CustomStringTableItem "{65B148C0FC390AFF}" {
+   Id "AR-RKN_SP01M-Hint_Ack_Title"
+   Target_en_us "Someone is calling you"
+   Modified 1706117954
+   Author "Rune"
+   LastChanged "Rune"
+  }
+  CustomStringTableItem "{65B148C12042F3BE}" {
+   Id "AR-RKN_SP01M-Hint_CallForFire_Text"
+   Target_en_us "Read the journal entry on your map to learn about the Call for Fire protocol."
+   Modified 1706117699
+   Author "Rune"
+   LastChanged "Rune"
+  }
+  CustomStringTableItem "{65B148C124F77449}" {
+   Id "AR-RKN_SP01M-Hint_CallForFire_Title"
    Target_en_us "Call for Fire"
-   Modified 1704224424
+   Modified 1706117648
+   Author "Rune"
+   LastChanged "Rune"
+  }
+  CustomStringTableItem "{65B148C4AA086E86}" {
+   Id "AR-RKN_SP01M-Hint_Stand_Text"
+   Target_en_us "Stand up"
+   Modified 1706119961
+   Author "Rune"
+   LastChanged "Rune"
+  }
+  CustomStringTableItem "{65B148C4B7379E98}" {
+   Id "AR-RKN_SP01M-Hint_Stand_Title"
+   Target_en_us "No sleeping on the job"
+   Modified 1706119950
    Author "Rune"
    LastChanged "Rune"
   }

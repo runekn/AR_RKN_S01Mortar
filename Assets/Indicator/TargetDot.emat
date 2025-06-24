@@ -1,0 +1,10 @@
+MatPBRDecal {
+ Color 0.227 0.227 0.227 1
+ ZBias 1
+ SortBias 2
+ SurfaceProperties "{7898C33735EFBBB0}Common/Materials/Game/Core/default.gamemat"
+ AlphaTest 0.697
+ BlendMode None
+ BCRMap "{C7A16977E8793A06}Assets/Indicator/dot.edds"
+ OpacityMap "{C7A16977E8793A06}Assets/Indicator/dot.edds"
+}

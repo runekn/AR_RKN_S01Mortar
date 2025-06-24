@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{AFA907E4942C0278}Assets/Props/Civilian/PaperHolder_01/Data/PaperHolder_01_Blank.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

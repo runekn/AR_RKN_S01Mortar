@@ -1,0 +1,15 @@
+GenericEntity : "{10C26F96EF7A8CF5}Prefabs/Props/Core/Props_Base.et" {
+ ID "F0DBA538AC2A0552"
+ components {
+  MeshObject "{5872F0EB7FA40561}" {
+   Object "{7A5113AEE713EBC6}Assets/Props/Civilian/PaperHolder_01/PaperHolder_01.xob"
+   Materials {
+    MaterialAssignClass "{65AF22F94467C962}" {
+     SourceMaterial "PaperHolder_01"
+     AssignedMaterial "{AFA907E4942C0278}Assets/Props/Civilian/PaperHolder_01/Data/PaperHolder_01_Blank.emat"
+    }
+   }
+  }
+ }
+ coords 1404.208 37.082 2315.989
+}
