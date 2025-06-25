@@ -47,6 +47,9 @@ class RKN_MortarTargetSlot : SCR_ScenarioFrameworkSlotBase
 	[Attribute(defvalue: "true", desc: "Observer will first request one shell that will be corrected unto target, before requesting fire for effect.", category: "Mortar target")]
 	bool m_bRequestAdjustFire;
 	
+	[Attribute(defvalue: "0", desc: "Shell must hit within this radius to proceed to fire-for-effect phase.", category: "Mortar target")]
+	int m_iAdjustTargetRadius;
+	
 	[Attribute(desc: "From where adjustment are calculated relative of", UIWidgets.Auto, category: "Mortar target")]
 	ref PointInfo m_oObserverPosition;
 	
@@ -81,6 +84,9 @@ class RKN_MortarTargetSlot : SCR_ScenarioFrameworkSlotBase
 			system.AddTarget(this);
 		if (m_oObserverPosition)
 			m_oObserverPosition.Init(GetOwner());
+		
+		if (m_iAdjustTargetRadius <= 0)
+			m_iAdjustTargetRadius = m_iTargetRadius;
 		
 		if (m_sAdjustSoundConfig)
 		{
@@ -133,13 +139,16 @@ class RKN_MortarTargetSlot : SCR_ScenarioFrameworkSlotBase
 		
 		Shape dbgShapeInner = null;
 		Shape dbgShapeOuter = null;
+		int targetRadius = m_iTargetRadius;
+		if (m_bAdjustFire)
+			targetRadius = m_iAdjustTargetRadius;
 
 		if (m_bDebugTargetSphere)
 			dbgShapeInner = Shape.CreateSphere(
 				m_iDebugShapeColor,
 				ShapeFlags.TRANSP | ShapeFlags.DOUBLESIDE | ShapeFlags.NOZWRITE | ShapeFlags.ONCE | ShapeFlags.NOOUTLINE,
 				GetOwner().GetOrigin(),
-				m_iTargetRadius
+				targetRadius
 			);
 
 		if (m_bDebugIgnoreSphere)
@@ -160,7 +169,11 @@ class RKN_MortarTargetSlot : SCR_ScenarioFrameworkSlotBase
 	void Splash(vector hit, float dist)
 	{
 		Print("Hit " + GetOwner().GetName() + " " + dist + " from " + GetOwner().GetOrigin());
-		if (dist < m_iTargetRadius)
+		int targetRadius = m_iTargetRadius;
+		if (m_bAdjustFire)
+			targetRadius = m_iAdjustTargetRadius;
+		
+		if (dist < targetRadius)
 		{
 			Print("On target!");
 			if (m_bAdjustFire)
@@ -312,14 +325,14 @@ class RKN_MortarTargetSlot : SCR_ScenarioFrameworkSlotBase
 	private string GetDistanceIndex(float d, out int index)
 	{
 		string subtitles = "";
-		if (d <= (m_iTargetRadius * 0.8))
+		if (d <= (m_iAdjustTargetRadius * 0.8))
 		{
 			return subtitles;
 		}
 		for (int i = 0; i < m_sAdjustSounds.m_aDistances.Count(); i++)
 		{
 			RKN_MortarTargetDistanceConfig config = m_sAdjustSounds.m_aDistances[i];
-			if (d < (config.m_iDistance * 1.1) || i == (m_sAdjustSounds.m_aDistances.Count() - 1))
+			if (d < (config.m_iDistance * 1.2) || i == (m_sAdjustSounds.m_aDistances.Count() - 1))
 			{
 				if (config.m_sSubtitles && !config.m_sSubtitles.IsEmpty())
 					subtitles = config.m_sSubtitles;

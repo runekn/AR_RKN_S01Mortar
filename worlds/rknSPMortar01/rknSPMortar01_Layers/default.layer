@@ -1357,6 +1357,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
                }
               }
              }
+             m_iAdjustTargetRadius 40
              m_oObserverPosition PointInfo "{657A735D1601B9D9}" {
               Offset 140.1387 -11.9273 -99.0835
              }
@@ -1492,6 +1493,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
                }
               }
              }
+             m_iAdjustTargetRadius 40
              m_oObserverPosition PointInfo "{657A735D05C3E80D}" {
               Offset -233.85791 -36.1968 -91.57639
              }
@@ -1564,7 +1566,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
          GenericEntity FireSupport1CTarget : "{C236ADE426F4E2E5}Prefabs/Systems/ScenarioFramework/Components/RKN_MortarTargetSlot.et" {
           components {
            RKN_MortarTargetSlot "{655EEA43D0CF9C30}" {
-            m_iTargetRadius 30
+            m_iTargetRadius 35
             m_iTargetIgnoreRadius 500
             m_iRequiredSplashesOnTarget 3
             m_iRequiredSplashes 5
@@ -1626,6 +1628,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
               }
              }
             }
+            m_iAdjustTargetRadius 30
             m_oObserverPosition PointInfo "{657A735D3F6933B4}" {
              Offset -121.87991 -8.8629 -721.88452
             }
@@ -1836,7 +1839,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
           FireSupport2BTarget {
            components {
             RKN_MortarTargetSlot "{655EEA43D0CF9C30}" {
-             m_iTargetRadius 30
+             m_iTargetRadius 35
              m_iTargetIgnoreRadius 500
              m_iRequiredSplashesOnTarget 3
              m_iRequiredSplashes 5
@@ -1898,6 +1901,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
                }
               }
              }
+             m_iAdjustTargetRadius 30
              m_oObserverPosition PointInfo "{657A735D2084CB7A}" {
               Offset 240.11771 45.7794 -272.33008
              }
@@ -2201,6 +2205,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
               }
              }
             }
+            m_iAdjustTargetRadius 20
             m_oObserverPosition PointInfo "{657A735D4274E80A}" {
              Offset -239.75391 216.96649 -339.82098
             }
@@ -2301,6 +2306,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
               }
              }
             }
+            m_iAdjustTargetRadius 20
             m_oObserverPosition PointInfo "{657A735D555C1A17}" {
              Offset 187.85161 -40.9564 98.1012
             }
