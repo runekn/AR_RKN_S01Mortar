@@ -21,7 +21,7 @@ class RKN_MortarSystem : GameSystem
 	void AddTarget(RKN_MortarTargetSlot target)
 	{
 		m_aTargets.Insert(target);
-		Print("Added mortar task!", LogLevel.WARNING);
+		Print("Added mortar task at " + target.GetOwner().GetOrigin());
 	}
 	
 	void RemoveTarget(RKN_MortarTargetSlot target)
@@ -30,7 +30,7 @@ class RKN_MortarSystem : GameSystem
 		if (index > -1)
 		{
 			m_aTargets.Remove(index);
-			Print("Removed mortar task!", LogLevel.WARNING);
+			Print("Removed mortar task!");
 		}
 	}
 	

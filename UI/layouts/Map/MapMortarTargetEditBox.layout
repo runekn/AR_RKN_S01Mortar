@@ -1,0 +1,252 @@
+FrameWidgetClass {
+ Name "MarkerEditRoot"
+ Slot FrameWidgetSlot "{5DA681954DE6635D}" {
+  OffsetLeft 0
+  OffsetTop 0
+  SizeX 880
+  OffsetRight -880
+  SizeY 500
+  OffsetBottom -500
+  SizeToContent 1
+ }
+ Clipping False
+ {
+  FrameWidgetClass "{65B51A2E001F2924}" {
+   Name "SizeFrame"
+   Slot FrameWidgetSlot "{5E1EC62B6B3A089A}" {
+    OffsetLeft 0
+    PositionY 50
+    OffsetTop 50
+    SizeX 1000
+    OffsetRight -1000
+    SizeY 400
+    OffsetBottom -450
+    SizeToContent 1
+   }
+   {
+    ImageWidgetClass "{65B51A2E001F2927}" {
+     Name "Background0"
+     Slot FrameWidgetSlot "{5E20DAC96557C7F3}" {
+      Anchor 0 0 1 1
+      PositionX 0
+      OffsetLeft 0
+      PositionY 0
+      OffsetTop 0
+      SizeX -900
+      OffsetRight 0
+      SizeY -470
+      OffsetBottom 0
+     }
+     Color 0.01 0.01 0.01 1
+    }
+    SizeLayoutWidgetClass "{65B51A2E001FC13E}" {
+     Name "SizeLayout0"
+     Slot FrameWidgetSlot "{5E2C825DA2EDA3F6}" {
+      Anchor 0.5 0.5 0.5 0.5
+      OffsetLeft 0
+      OffsetTop 0
+      SizeX 1000
+      OffsetRight -1000
+      SizeY 500
+      OffsetBottom -500
+      Alignment 0.5 0.5
+      SizeToContent 1
+     }
+     AllowWidthOverride 1
+     WidthOverride 880
+     {
+      VerticalLayoutWidgetClass "{65B51A2E001FC13F}" {
+       Name "MarkerEditVLayout"
+       Slot AlignableSlot "{5E2C825DA2FAB4C5}" {
+        HorizontalAlign 3
+        VerticalAlign 3
+       }
+       {
+        TextWidgetClass "{65B537E2380C4E64}" : "{6F198A46CBC549CE}UI/layouts/WidgetLibrary/TextWidgets/Text_Heading1.layout" {
+         Name "Text0"
+         Slot LayoutSlot "{65B537E2380C4E70}" {
+          Padding 35 8 48 0
+         }
+         Text "Place Marker"
+         "Font Size" 40
+         "Min Font Size" 35
+        }
+        ButtonWidgetClass "{65B51A2CEB123826}" : "{4A41296C0E9A889F}UI/layouts/WidgetLibrary/WLib_Slider.layout" {
+         Name "RadiusSliderRoot"
+         Slot LayoutSlot "{65B51A2CEB123839}" {
+          HorizontalAlign 3
+          Padding 48 8 48 0
+         }
+         components {
+          SCR_SliderComponent "{548294960C7399D9}" {
+           m_sLabel "Target radius"
+           m_fSizeWithLabel 44
+           m_sLabelLayout "{C5598C929C45420A}UI/layouts/Map/MapMarkerEditBoxLabel.layout"
+           m_fValue 50
+           m_fMinValue 5
+           m_fMaxValue 100
+           m_fStep 5
+           m_sFormatText "%1 Meters"
+          }
+         }
+        }
+        ButtonWidgetClass "{65B51A2B0A436B37}" : "{4A41296C0E9A889F}UI/layouts/WidgetLibrary/WLib_Slider.layout" {
+         Name "RequiredHitsSliderRoot"
+         Slot LayoutSlot "{65B51A2CEB123839}" {
+          HorizontalAlign 3
+          Padding 48 8 48 0
+         }
+         components {
+          SCR_SliderComponent "{548294960C7399D9}" {
+           m_sLabel "Required hits on target"
+           m_fSizeWithLabel 44
+           m_sLabelLayout "{C5598C929C45420A}UI/layouts/Map/MapMarkerEditBoxLabel.layout"
+           m_fValue 3
+           m_fMinValue 1
+           m_fMaxValue 5
+           m_fStep 1
+           m_sFormatText "%1"
+          }
+         }
+        }
+        ButtonWidgetClass "{65B51A2B7A790102}" : "{5D5055E10FD00549}UI/layouts/WidgetLibrary/ToolBoxes/WLib_Checkbox.layout" {
+         Name "AdjustCheckbox"
+         Slot LayoutSlot "{65B51A2B7A790108}" {
+          HorizontalAlign 3
+          Padding 48 8 48 0
+         }
+         components {
+          SCR_CheckboxComponent "{546A9B7B0A8AD927}" {
+           m_sLabel "Adjustment phase"
+           m_fSizeWithLabel 44
+           m_sLabelLayout "{C5598C929C45420A}UI/layouts/Map/MapMarkerEditBoxLabel.layout"
+           m_iSelectedItem 1
+          }
+         }
+        }
+        ButtonWidgetClass "{65B51A2AA3CCFD8B}" : "{4A41296C0E9A889F}UI/layouts/WidgetLibrary/WLib_Slider.layout" {
+         Name "AdjustRadiusSliderRoot"
+         Slot LayoutSlot "{65B51A2CEB123839}" {
+          HorizontalAlign 3
+          Padding 48 8 48 0
+         }
+         components {
+          SCR_SliderComponent "{548294960C7399D9}" {
+           m_sLabel "Adjustment target radius"
+           m_fSizeWithLabel 44
+           m_sLabelLayout "{C5598C929C45420A}UI/layouts/Map/MapMarkerEditBoxLabel.layout"
+           m_fValue 50
+           m_fMinValue 5
+           m_fMaxValue 100
+           m_fStep 5
+           m_sFormatText "%1 Meters"
+          }
+         }
+        }
+        ButtonWidgetClass "{65B51A2E001CA219}" : "{4A41296C0E9A889F}UI/layouts/WidgetLibrary/WLib_Slider.layout" {
+         Name "ObserverSliderRoot"
+         Slot LayoutSlot "{5E3E82D7E541BB4E}" {
+          HorizontalAlign 3
+          Padding 48 8 48 0
+         }
+         components {
+          SCR_SliderComponent "{548294960C7399D9}" {
+           m_sLabel "Observer direction"
+           m_fSizeWithLabel 44
+           m_sLabelLayout "{C5598C929C45420A}UI/layouts/Map/MapMarkerEditBoxLabel.layout"
+           m_fValue 0
+           m_fMaxValue 360
+           m_fStep 10
+           m_sFormatText "#AR-ValueUnit_Degrees"
+          }
+         }
+         {
+          SizeLayoutWidgetClass "{55387AC2CCC7E284}" {
+           Prefab "{55387AC2CCC7E284}"
+           Slot ButtonWidgetSlot "{55387AC2CCC7E2A4}" {
+            VerticalAlign 3
+           }
+           {
+            OverlayWidgetClass "{55367D8E531FD623}" {
+             Prefab "{55367D8E531FD623}"
+             {
+              SizeLayoutWidgetClass "{55387AC20CC69AE3}" {
+               Prefab "{55387AC20CC69AE3}"
+               {
+                TextWidgetClass "{55387AC25A3A8660}" {
+                 Prefab "{55387AC25A3A8660}"
+                 Slot AlignableSlot "{55387AC25A3A859E}" {
+                 }
+                }
+               }
+              }
+              HorizontalLayoutWidgetClass "{55367D8E4592BC6E}" {
+               Prefab "{55367D8E4592BC6E}"
+               {
+                HorizontalLayoutWidgetClass "{55387AC23D03E651}" {
+                 Prefab "{55387AC23D03E651}"
+                 {
+                  SliderWidgetClass "{55387AC2379477C0}" {
+                   Prefab "{55387AC2379477C0}"
+                   minimum -180
+                   maximum 180
+                   step 10
+                   current 0
+                  }
+                 }
+                }
+               }
+              }
+             }
+            }
+           }
+          }
+         }
+        }
+        HorizontalLayoutWidgetClass "{65B51A2E001CA21E}" {
+         Name "HorizontalLayoutButtons"
+         Slot LayoutSlot "{5E209B35E8407E89}" {
+          Padding 50 30 50 10
+         }
+         {
+          ButtonWidgetClass "{65B51A2E001CA21F}" : "{CB8563509DEF3E0E}UI/layouts/WidgetLibrary/Buttons/WLib_NavigationButtonSmall.layout" {
+           Name "ButtonCancel"
+           Slot LayoutSlot "{5E2C8279F11A74BA}" {
+            HorizontalAlign 0
+            VerticalAlign 1
+            SizeMode Fill
+            FillWeight 5
+           }
+           components {
+            SCR_InputButtonComponent "{5D346C3DD81D95CD}" {
+             m_sActionName "MenuBack"
+             m_sLabel "#AR-Keybind_Cancel"
+             m_bOverrideTextSize 1
+            }
+           }
+          }
+          ButtonWidgetClass "{65B51A2E001CA2E3}" : "{CB8563509DEF3E0E}UI/layouts/WidgetLibrary/Buttons/WLib_NavigationButtonSmall.layout" {
+           Name "ButtonConfirm"
+           Slot LayoutSlot "{5E2C827999D9F551}" {
+            HorizontalAlign 2
+            VerticalAlign 1
+            Padding 20 0 0 0
+           }
+           components {
+            SCR_InputButtonComponent "{5D346C3DD81D95CD}" {
+             m_sActionName "MenuSelect"
+             m_sLabel "#AR-MapMarker_PlacePublic"
+             m_bOverrideTextSize 1
+            }
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

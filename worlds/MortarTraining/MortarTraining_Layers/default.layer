@@ -1,0 +1,209 @@
+SCR_AIWorld SCR_AIWorld : "{E0A05C76552E7F58}Prefabs/AI/SCR_AIWorld.et" {
+ coords 1891.659 11.438 1822.161
+ {
+  CommentEntity {
+   coords 0 1 0
+   m_Comment "SCR_AIWorld: "\
+   "Configure navigation mesh"
+   m_Color 0 0 0
+   m_FaceCamera 1
+   m_TextBackground 1
+   m_BackgroundColor 1 0.6 0
+   m_BackgroundTransparency 0
+  }
+ }
+}
+PerceptionManager PerceptionManager : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+ coords 1891.659 12.065 1827.161
+}
+SCR_FactionManager FactionManager_USxUSSR : "{589540B35EBA8CDC}Prefabs/MP/Managers/Factions/FactionManager_USxUSSR.et" {
+ coords 1891.659 11.714 1824.161
+ {
+  CommentEntity {
+   coords 0 1 0
+   m_Comment "FactionManager_USxUSSR: "\
+   "Configure desired factions"
+   m_Color 0 0 0
+   m_FaceCamera 1
+   m_TextBackground 1
+   m_BackgroundColor 1 0.6 0
+   m_BackgroundTransparency 0
+  }
+ }
+}
+RadioManagerEntity RadioManager : "{B8E09FAB91C4ECCD}Prefabs/Radio/RadioManager.et" {
+ coords 1891.659 11.959 1826.161
+}
+SCR_BaseGameMode GameModeSF : "{ECEEDB2D3737204B}Prefabs/Systems/ScenarioFramework/GameModeSF.et" {
+ components {
+  RKN_MapMortarTargetTrainingManagerComponent "{65B70A67AC50F0CB}" {
+   m_sParentLayerName "Target_layer"
+   m_sIdenticatorName "IndicatorCanvas"
+   m_sActorEntityName "Radio"
+   m_sAdjustSoundConfig "{DCB24F7587E03517}Configs/VoiceData/FireMission1A.conf"
+  }
+  SCR_MapConfigComponent "{5C669498E250A34B}" {
+   m_sGadgetMapConfigPath "{F765EDD79FE5BF06}Configs/Map/RKN_SP01MT_MapFullscreen.conf"
+  }
+ }
+ coords 1891.659 11.326 1821.161
+}
+ScriptedChatEntity ScriptedChatEntity : "{F69BC912AC8236F9}Prefabs/MP/ScriptedChatEntity.et" {
+ coords 1891.659 12.175 1828.161
+}
+SCR_BaseTaskManager TaskManager : "{1AC69CD7907FB4F8}Prefabs/Systems/ScenarioFramework/Tasks/TaskManager.et" {
+ coords 1891.659 11.576 1823.161
+ {
+  CommentEntity {
+   coords 0 1 0
+   m_Comment "TaskManager: "\
+   "Needed for task generation"
+   m_Color 0 0 0
+   m_FaceCamera 1
+   m_TextBackground 1
+   m_BackgroundColor 1 0.6 0
+   m_BackgroundTransparency 0
+  }
+ }
+}
+GenericEntity Radio : "{7183F1A80BC18B7C}Prefabs/Props/Military/Compositions/US/RadioStation_US.et" {
+ components {
+  SignalsManagerComponent "{65B70A6734EBAD20}" {
+  }
+  SCR_CommunicationSoundComponent "{65B70A67043F4C1E}" {
+   Filenames {
+    "{2B919BAC674D1678}Sounds/VO_Radio.acp"
+   }
+   IncludeInactive 1
+  }
+ }
+ coords 781.563 39.417 2728.049
+ angleY -103.431
+}
+GenericEntity : "{962EB289CF844AA2}Prefabs/Compositions/Slotted/SlotFlatSmall/SupplyCache_S_FIA_06.et" {
+ coords 769.769 39 2725.905
+ angleY -32.139
+ {
+  GenericEntity {
+   ID "5D45393949376AB5"
+   {
+    GenericEntity {
+     ID "5D4539397A9246E8"
+     components {
+      SCR_ResourceComponent "{5D247A59598D71AE}" {
+       m_aContainers {
+        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
+         m_fResourceValueCurrent 1000
+         m_fResourceValueMax 1000
+        }
+       }
+      }
+     }
+    }
+    GenericEntity {
+     ID "5D4539397A9246EE"
+     components {
+      SCR_ResourceComponent "{5D247A59598D71AE}" {
+       m_aContainers {
+        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
+         m_fResourceValueCurrent 1000
+         m_fResourceValueMax 1000
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}
+SCR_LoadoutManager LoadoutManager_USxUSSR : "{97EF4C1A41F63DDB}Prefabs/MP/Managers/Loadouts/LoadoutManager_USxUSSR.et" {
+ coords 1891.659 11.839 1825.161
+ {
+  CommentEntity {
+   coords 0 1 0
+   m_Comment "LoadoutManager_USxUSSR: "\
+   "Configure desired loadouts"
+   m_Color 0 0 0
+   m_FaceCamera 1
+   m_TextBackground 1
+   m_BackgroundColor 1 0.6 0
+   m_BackgroundTransparency 0
+  }
+ }
+}
+GenericEntity : "{B8BADFA9530C38F4}Prefabs/Compositions/Misc/SubCompositions/Foundation_Mortar_US.et" {
+ coords 778.899 39 2726.734
+ angleY 143.989
+ {
+  GenericEntity {
+   ID "6186D3A8CE3D2672"
+   components {
+    SCR_ArsenalComponent "{589F01C9C8D4A475}" {
+     m_OverwriteArsenalConfig SCR_ArsenalItemListConfig "{65B70A6699A9D915}" {
+      m_aArsenalItems {
+       SCR_ArsenalItemStandalone "{65B70A6698528687}" {
+        m_eItemType MORTARS
+        m_eItemMode AMMUNITION
+        m_ItemResourceName "{38BAE094333E31BF}Prefabs/Weapons/Ammo/Ammo_Shell_81mm_HE_M821.et"
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}
+$grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
+ Insertion {
+  coords 774.447 39 2733.889
+  {
+   GenericEntity Layer1 : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+    coords 0 0 0
+    {
+     GenericEntity Slot1 : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+      components {
+       SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+        m_aPlugins {
+         SCR_ScenarioFrameworkPluginSpawnPoint "{65B70A79305AAF85}" {
+          m_aActionsOnSpawnPointUsed {
+           SCR_ScenarioFrameworkActionWaitAndExecute "{65B70A79413A6407}" {
+            m_iDelayInSeconds 5
+            m_aActions {
+             SCR_ScenarioFrameworkActionShowHint "{65B70A797C4E4AD8}" {
+              m_sTitle "Spawn Mortar Target"
+              m_sText "To spawn a target, open your map and use the radial map menu."
+             }
+            }
+           }
+          }
+         }
+        }
+        m_sObjectToSpawn "{5A2220DD0C16958B}Prefabs/MP/Spawning/SpawnPoint_US.et"
+       }
+      }
+      coords 0 0 0
+     }
+    }
+   }
+  }
+ }
+ Target_area {
+  coords 779.487 39 2733.535
+  {
+   GenericEntity Target_layer : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+    coords 0 0 0
+   }
+  }
+ }
+}
+GenericEntity IndicatorCanvas : "{DCBC472CDA3EA9B2}Prefabs/Props/Civilian/WallMap_01.et" {
+ components {
+  RKN_MortarTargetIndicatorComponent "{65B70A667D9FD944}" {
+   m_HitDecal "{236B15B6CCF854FA}Assets/Indicator/TargetDot.emat"
+   m_RadiusDecal "{DC34E38119C61257}Assets/Indicator/TargetCircle.emat"
+  }
+ }
+ coords 777.072 39.849 2725.04
+ angleY 56.667
+}

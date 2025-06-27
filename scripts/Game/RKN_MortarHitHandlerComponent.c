@@ -16,9 +16,7 @@ class RKN_MortarHitHandlerComponent : ScriptComponent
 		if (!Replication.IsServer())
 			return;
 		
-		Print("Origin: " + m_vOrigin, LogLevel.WARNING);
-		if (!m_vOrigin)
-			return;
+		Print("Splash: " + owner.GetOrigin());
 		
 		RKN_MortarSystem system = RKN_MortarSystem.GetInstance();
 		if (system)
