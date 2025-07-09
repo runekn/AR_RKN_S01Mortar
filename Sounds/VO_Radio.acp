@@ -454,7 +454,7 @@ AudioClass {
    id 241673
    name "SOUND_FIREMISSION_AMBUSH_SUCCESS_SMOKE_1"
    version 5
-   tl -1314.073 5239.367
+   tl -1317.073 5378.367
    parent "{64A825EC9DC1123C}Sounds/_SharedData/Configs/Sound/Tutorial/Sound_Tutorial_VO_Radio.conf"
    ins {
     ConnectionsClass connections {
@@ -474,7 +474,7 @@ AudioClass {
    id 244745
    name "SOUND_FIREMISSION_AMBUSH_SUCCESS_SMOKE_2"
    version 5
-   tl -1314.073 5406.38
+   tl -1317.073 5545.38
    parent "{64A825EC9DC1123C}Sounds/_SharedData/Configs/Sound/Tutorial/Sound_Tutorial_VO_Radio.conf"
    ins {
     ConnectionsClass connections {
@@ -494,7 +494,7 @@ AudioClass {
    id 249865
    name "SOUND_HQ_CALLSIGN"
    version 5
-   tl -1315.03 5574.972
+   tl -1318.03 5713.972
    parent "{64A825EC9DC1123C}Sounds/_SharedData/Configs/Sound/Tutorial/Sound_Tutorial_VO_Radio.conf"
    ins {
     ConnectionsClass connections {
@@ -514,7 +514,7 @@ AudioClass {
    id 252937
    name "SOUND_END_NEUTRAL_2"
    version 5
-   tl -1317.336 6561.656
+   tl -1320.336 6700.656
    parent "{64A825EC9DC1123C}Sounds/_SharedData/Configs/Sound/Tutorial/Sound_Tutorial_VO_Radio.conf"
    ins {
     ConnectionsClass connections {
@@ -534,7 +534,7 @@ AudioClass {
    id 259081
    name "SOUND_END_GOOD_2"
    version 5
-   tl -1315.325 6389.377
+   tl -1318.325 6528.377
    parent "{64A825EC9DC1123C}Sounds/_SharedData/Configs/Sound/Tutorial/Sound_Tutorial_VO_Radio.conf"
    ins {
     ConnectionsClass connections {
@@ -554,7 +554,7 @@ AudioClass {
    id 262153
    name "SOUND_END_NEUTRAL_3"
    version 5
-   tl -1317.336 6742.524
+   tl -1320.336 6881.524
    parent "{64A825EC9DC1123C}Sounds/_SharedData/Configs/Sound/Tutorial/Sound_Tutorial_VO_Radio.conf"
    ins {
     ConnectionsClass connections {
@@ -574,7 +574,7 @@ AudioClass {
    id 264201
    name "SOUND_END_BAD_3"
    version 5
-   tl -1317.904 7094.953
+   tl -1320.904 7233.953
    parent "{64A825EC9DC1123C}Sounds/_SharedData/Configs/Sound/Tutorial/Sound_Tutorial_VO_Radio.conf"
    ins {
     ConnectionsClass connections {
@@ -594,7 +594,7 @@ AudioClass {
    id 265225
    name "SOUND_END_BAD_2"
    version 5
-   tl -1317.904 6914.083
+   tl -1320.904 7053.083
    parent "{64A825EC9DC1123C}Sounds/_SharedData/Configs/Sound/Tutorial/Sound_Tutorial_VO_Radio.conf"
    ins {
     ConnectionsClass connections {
@@ -614,7 +614,7 @@ AudioClass {
    id 270345
    name "SOUND_END_BAD_4"
    version 5
-   tl -1317.904 7261.965
+   tl -1320.904 7400.965
    parent "{64A825EC9DC1123C}Sounds/_SharedData/Configs/Sound/Tutorial/Sound_Tutorial_VO_Radio.conf"
    ins {
     ConnectionsClass connections {
@@ -714,7 +714,7 @@ AudioClass {
    id 295945
    name "SOUND_HQ2"
    version 5
-   tl -1312.877 5730.898
+   tl -1315.877 5869.898
    parent "{64A825EC9DC1123C}Sounds/_SharedData/Configs/Sound/Tutorial/Sound_Tutorial_VO_Radio.conf"
    ins {
     ConnectionsClass connections {
@@ -734,7 +734,7 @@ AudioClass {
    id 297993
    name "SOUND_HQ3"
    version 5
-   tl -1312.535 5901.887
+   tl -1315.535 6040.887
    parent "{64A825EC9DC1123C}Sounds/_SharedData/Configs/Sound/Tutorial/Sound_Tutorial_VO_Radio.conf"
    ins {
     ConnectionsClass connections {
@@ -754,7 +754,7 @@ AudioClass {
    id 301065
    name "SOUND_HQ4"
    version 5
-   tl -1313.307 6064.606
+   tl -1316.307 6203.606
    parent "{64A825EC9DC1123C}Sounds/_SharedData/Configs/Sound/Tutorial/Sound_Tutorial_VO_Radio.conf"
    ins {
     ConnectionsClass connections {
@@ -774,7 +774,7 @@ AudioClass {
    id 304137
    name "SOUND_HQ5"
    version 5
-   tl -1312.518 6218.138
+   tl -1315.518 6357.138
    parent "{64A825EC9DC1123C}Sounds/_SharedData/Configs/Sound/Tutorial/Sound_Tutorial_VO_Radio.conf"
    ins {
     ConnectionsClass connections {
@@ -822,6 +822,26 @@ AudioClass {
      links {
       ConnectionClass connection {
        id 45074
+       port 65
+      }
+     }
+    }
+   }
+   outState 8203
+   outStatePort 19463
+  }
+  SoundClass : "{64A825EC9DC1123C}Sounds/_SharedData/Configs/Sound/Tutorial/Sound_Tutorial_VO_Radio.conf" {
+   id 313353
+   name "SOUND_MORTAR_CALL_5"
+   version 5
+   tl -1313.94 5217.333
+   parent "{64A825EC9DC1123C}Sounds/_SharedData/Configs/Sound/Tutorial/Sound_Tutorial_VO_Radio.conf"
+   ins {
+    ConnectionsClass connections {
+     id 64
+     links {
+      ConnectionClass connection {
+       id 312338
        port 65
       }
      }
@@ -988,6 +1008,10 @@ AudioClass {
       }
       ConnectionClass connection {
        id 311305
+       port 65
+      }
+      ConnectionClass connection {
+       id 313353
        port 65
       }
      }
@@ -1937,7 +1961,7 @@ AudioClass {
    id 240658
    name "Shader 1"
    version 5
-   tl -1555.629 5239.367
+   tl -1558.629 5378.367
    ins {
     ConnectionsClass connections {
      id 0
@@ -1985,7 +2009,7 @@ AudioClass {
    id 242706
    name "Shader 1"
    version 5
-   tl -1555.629 5406.38
+   tl -1558.629 5545.38
    ins {
     ConnectionsClass connections {
      id 0
@@ -2033,7 +2057,7 @@ AudioClass {
    id 245778
    name "Shader 1"
    version 5
-   tl -1556.88 6389.377
+   tl -1559.88 6528.377
    ins {
     ConnectionsClass connections {
      id 0
@@ -2081,7 +2105,7 @@ AudioClass {
    id 248850
    name "Shader 1"
    version 5
-   tl -1558.892 6561.656
+   tl -1561.892 6700.656
    ins {
     ConnectionsClass connections {
      id 0
@@ -2129,7 +2153,7 @@ AudioClass {
    id 251922
    name "Shader 1"
    version 5
-   tl -1556.585 5574.972
+   tl -1559.585 5713.972
    ins {
     ConnectionsClass connections {
      id 0
@@ -2177,7 +2201,7 @@ AudioClass {
    id 256018
    name "Shader 1"
    version 5
-   tl -1558.892 6742.524
+   tl -1561.892 6881.524
    ins {
     ConnectionsClass connections {
      id 0
@@ -2225,7 +2249,7 @@ AudioClass {
    id 266258
    name "Shader 1"
    version 5
-   tl -1559.458 7094.953
+   tl -1562.458 7233.953
    ins {
     ConnectionsClass connections {
      id 0
@@ -2273,7 +2297,7 @@ AudioClass {
    id 268306
    name "Shader 1"
    version 5
-   tl -1559.458 6914.083
+   tl -1562.458 7053.083
    ins {
     ConnectionsClass connections {
      id 0
@@ -2321,7 +2345,7 @@ AudioClass {
    id 271378
    name "Shader 1"
    version 5
-   tl -1559.458 7261.965
+   tl -1562.458 7400.965
    ins {
     ConnectionsClass connections {
      id 0
@@ -2561,7 +2585,7 @@ AudioClass {
    id 294930
    name "Shader 1"
    version 5
-   tl -1554.432 5732.048
+   tl -1557.432 5871.048
    ins {
     ConnectionsClass connections {
      id 0
@@ -2609,7 +2633,7 @@ AudioClass {
    id 299026
    name "Shader 1"
    version 5
-   tl -1554.862 6064.606
+   tl -1557.862 6203.606
    ins {
     ConnectionsClass connections {
      id 0
@@ -2657,7 +2681,7 @@ AudioClass {
    id 300050
    name "Shader 1"
    version 5
-   tl -1554.09 5901.887
+   tl -1557.09 6040.887
    ins {
     ConnectionsClass connections {
      id 0
@@ -2705,7 +2729,7 @@ AudioClass {
    id 305170
    name "Shader 1"
    version 5
-   tl -1554.072 6218.138
+   tl -1557.072 6357.138
    ins {
     ConnectionsClass connections {
      id 0
@@ -2787,6 +2811,54 @@ AudioClass {
      links {
       ConnectionClass connection {
        id 309252
+       port 65
+      }
+     }
+    }
+   }
+   pi {
+    7 0
+   }
+   ITD 0
+  }
+  ShaderClass {
+   id 312338
+   name "Shader 1"
+   version 5
+   tl -1555.496 5217.333
+   ins {
+    ConnectionsClass connections {
+     id 0
+     links {
+      ConnectionClass connection {
+       id 1052
+       port 65
+      }
+     }
+    }
+    ConnectionsClass connections {
+     id 1
+     links {
+      ConnectionClass connection {
+       id 4115
+       port 65
+      }
+     }
+    }
+    ConnectionsClass connections {
+     id 2
+     links {
+      ConnectionClass connection {
+       id 6165
+       port 65
+      }
+     }
+    }
+    ConnectionsClass connections {
+     id 64
+     links {
+      ConnectionClass connection {
+       id 314372
        port 65
       }
      }
@@ -3773,7 +3845,7 @@ AudioClass {
    id 239620
    name "Bank 13"
    version 7
-   tl -1795.698 5239.367
+   tl -1798.698 5378.367
    Samples {
     AudioBankSampleClass Sample {
      Filename "{E266079349E4419C}Sounds/Samples/FIREMISSION_0/SOUND_FIREMISSION_0_SUCCESS_SMOKE_1.wav"
@@ -3784,7 +3856,7 @@ AudioClass {
    id 243716
    name "Bank 13"
    version 7
-   tl -1795.698 5406.38
+   tl -1798.698 5545.38
    Samples {
     AudioBankSampleClass Sample {
      Filename "{7B78BE0A5403700C}Sounds/Samples/FIREMISSION_0/SOUND_FIREMISSION_0_SUCCESS_SMOKE_2.wav"
@@ -3795,7 +3867,7 @@ AudioClass {
    id 246788
    name "Bank 13"
    version 7
-   tl -1798.961 6742.524
+   tl -1801.961 6881.524
    Samples {
     AudioBankSampleClass Sample {
      Filename "{175C2311881BC792}Sounds/Samples/HQ/SOUND_END_NEUTRAL_3.wav"
@@ -3806,7 +3878,7 @@ AudioClass {
    id 250884
    name "Bank 13"
    version 7
-   tl -1796.655 5573.972
+   tl -1799.655 5712.972
    Samples {
     AudioBankSampleClass Sample {
      Filename "{3EBECB50532805B3}Sounds/Samples/HQ/SOUND_HQ_INTRO_1.wav"
@@ -3817,7 +3889,7 @@ AudioClass {
    id 257028
    name "Bank 13"
    version 7
-   tl -1796.95 6389.377
+   tl -1799.95 6528.377
    Samples {
     AudioBankSampleClass Sample {
      Filename "{46F94BC5FA5D02C1}Sounds/Samples/HQ/SOUND_END_GOOD_2.wav"
@@ -3828,7 +3900,7 @@ AudioClass {
    id 261124
    name "Bank 13"
    version 7
-   tl -1798.961 6561.656
+   tl -1801.961 6700.656
    Samples {
     AudioBankSampleClass Sample {
      Filename "{60564B997CB928E2}Sounds/Samples/HQ/SOUND_END_NEUTRAL_2.wav"
@@ -3839,7 +3911,7 @@ AudioClass {
    id 267268
    name "Bank 13"
    version 7
-   tl -1799.529 6914.083
+   tl -1802.529 7053.083
    Samples {
     AudioBankSampleClass Sample {
      Filename "{06DD12875E0E2200}Sounds/Samples/HQ/SOUND_END_BAD_2.wav"
@@ -3850,7 +3922,7 @@ AudioClass {
    id 269316
    name "Bank 13"
    version 7
-   tl -1799.529 7261.965
+   tl -1802.529 7400.965
    Samples {
     AudioBankSampleClass Sample {
      Filename "{7610805ECC2A77B3}Sounds/Samples/HQ/SOUND_END_BAD_4.wav"
@@ -3861,7 +3933,7 @@ AudioClass {
    id 272388
    name "Bank 13"
    version 7
-   tl -1799.529 7094.953
+   tl -1802.529 7233.953
    Samples {
     AudioBankSampleClass Sample {
      Filename "{71D77A0FAAACCD70}Sounds/Samples/HQ/SOUND_END_BAD_3.wav"
@@ -4017,7 +4089,7 @@ AudioClass {
    id 293892
    name "Bank 13"
    version 7
-   tl -1794.502 5731.048
+   tl -1797.502 5870.048
    Samples {
     AudioBankSampleClass Sample {
      Filename "{A7A072C94ECF3423}Sounds/Samples/HQ/SOUND_HQ_INTRO_2.wav"
@@ -4028,7 +4100,7 @@ AudioClass {
    id 296964
    name "Bank 13"
    version 7
-   tl -1794.932 6063.606
+   tl -1797.932 6202.606
    Samples {
     AudioBankSampleClass Sample {
      Filename "{D76DE010DCEB6190}Sounds/Samples/HQ/SOUND_HQ_INTRO_4.wav"
@@ -4039,7 +4111,7 @@ AudioClass {
    id 302084
    name "Bank 13"
    version 7
-   tl -1794.16 5900.887
+   tl -1797.16 6039.887
    Samples {
     AudioBankSampleClass Sample {
      Filename "{D0AA1A41BA6DDB53}Sounds/Samples/HQ/SOUND_HQ_INTRO_3.wav"
@@ -4050,7 +4122,7 @@ AudioClass {
    id 303108
    name "Bank 13"
    version 7
-   tl -1794.143 6217.138
+   tl -1797.143 6356.138
    Samples {
     AudioBankSampleClass Sample {
      Filename "{A067889828498EE0}Sounds/Samples/HQ/SOUND_HQ_INTRO_5.wav"
@@ -4093,6 +4165,17 @@ AudioClass {
     AudioBankSampleClass Sample {
      Filename "{1EA4CB3A7809F2C1}Sounds/Samples/FIREMISSION_3C/SOUND_FIREMISSION_3C_ADJUST_SUFFIX.wav"
      Index 4
+    }
+   }
+  }
+  BankLocalClass {
+   id 314372
+   name "Bank 13"
+   version 7
+   tl -1795.565 5216.333
+   Samples {
+    AudioBankSampleClass Sample {
+     Filename "{51BEA01F709BEDBA}Sounds/Samples/MORTAR/SOUND_MORTAR_CALL_5.wav"
     }
    }
   }
@@ -4262,6 +4345,10 @@ AudioClass {
       }
       ConnectionClass connection {
        id 311305
+       port 5
+      }
+      ConnectionClass connection {
+       id 313353
        port 5
       }
      }
@@ -4450,6 +4537,10 @@ AudioClass {
        id 311305
        port 5
       }
+      ConnectionClass connection {
+       id 313353
+       port 5
+      }
      }
     }
     ConnectionsClass connections {
@@ -4473,10 +4564,10 @@ AudioClass {
  }
  groups {
   GroupClass {
-   id 306179
-   name "Other"
+   id 310275
+   name "Firemission_adjust"
    children {
-    233476 227337 231442 243716 228356 292882 257028 35849 259081 246788 229394 270345 293892 245778 297993 37906 299026 239620 248850 271378 230404 234514 272388 252937 295945 269316 290825 256018 265225 267268 296964 262153 264201 224260 268306 300050 250884 294930 235529 225298 242706 301065 240658 261124 249865 266258 291844 302084 305170 303108 232457 36868 304137 244745 251922 241673 226313
+    73737 307209 72722 309252 45074 77833 76818 308242 203780 43012 41988 44056 204804 38916 50180
    }
    parent -1
    Color 0.6 0.6 0.6 0.251
@@ -4491,10 +4582,10 @@ AudioClass {
    Color 0.6 0.6 0.6 0.251
   }
   GroupClass {
-   id 310275
-   name "Firemission_adjust"
+   id 315395
+   name "Other"
    children {
-    73737 307209 72722 309252 45074 77833 76818 308242 203780 43012 41988 44056 204804 38916 50180
+    296964 302084 264201 267268 314372 229394 244745 232457 235529 271378 36868 233476 228356 268306 226313 304137 261124 256018 295945 231442 239620 224260 251922 313353 305170 240658 257028 246788 250884 234514 269316 248850 297993 303108 245778 225298 252937 293892 301065 262153 312338 243716 272388 249865 35849 227337 265225 259081 266258 242706 299026 37906 241673 294930 300050 230404 270345
    }
    parent -1
    Color 0.6 0.6 0.6 0.251

@@ -398,6 +398,13 @@ StringTable {
    Author "Rune"
    LastChanged "Rune"
   }
+  CustomStringTableItem "{65D31AFFADCB62F7}" {
+   Id "AR-RKN_SP01M-VA_EnemyMortar_Hint"
+   Target_en_us "Hammer, I pinned the origin of the enemy fire to around <i>078 034</i>. Out."
+   Modified 1708336843
+   Author "Rune"
+   LastChanged "Rune"
+  }
   CustomStringTableItem "{6594645D79293EE9}" {
    Id "AR-RKN_SP01M-VA_EnemyMortar_Inquery1"
    Target_en_us "Hammer, this is India 3-2 come in?"

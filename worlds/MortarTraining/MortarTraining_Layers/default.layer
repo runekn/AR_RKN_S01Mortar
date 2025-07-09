@@ -182,7 +182,21 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
         m_sObjectToSpawn "{5A2220DD0C16958B}Prefabs/MP/Spawning/SpawnPoint_US.et"
        }
       }
-      coords 0 0 0
+      coords 3.319 0 -5.524
+      angleY 148.967
+     }
+     GenericEntity SlotMarker1 : "{E537867C6E760514}Prefabs/Systems/ScenarioFramework/Components/SlotMarker.et" {
+      components {
+       SCR_ScenarioFrameworkSlotMarker "{5EA2BD9901E5E82E}" {
+        m_MapMarkerType SCR_ScenarioFrameworkMarkerMilitary "{65B70A717E24F338}" {
+         m_sMapMarkerText "Spawn"
+         m_eMapMarkerDimension INSTALLATION
+         m_eMapMarkerType1Modifier MORTAR
+         m_eMapMarkerType2Modifier MORTAR
+        }
+       }
+      }
+      coords 2.24 0 -4.129
      }
     }
    }

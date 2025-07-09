@@ -66,6 +66,12 @@ class RKN_MapMortarTargetTrainingManagerComponent : SCR_BaseGameModeComponent
 		getter.m_sEntityName = m_sActorEntityName;
 		m_TargetSlot.m_SoundActorGetter = getter;
 		m_TargetSlot.m_sIndicatorEntityName = m_sIdenticatorName;
+		array<ref SCR_ScenarioFrameworkActionBase> failArray = {};
+		failArray.Insert(new RKN_MortarTargetTrainingCompletionAction(this, false));
+		array<ref SCR_ScenarioFrameworkActionBase> successArray = {};
+		successArray.Insert(new RKN_MortarTargetTrainingCompletionAction(this, true));
+		m_TargetSlot.m_aActionsOnFailure = failArray;
+		m_TargetSlot.m_aActionsOnCompletion = successArray;
 		
 		if (adjust)
 		{
@@ -92,9 +98,11 @@ class RKN_MapMortarTargetTrainingManagerComponent : SCR_BaseGameModeComponent
 		m_Task.SetTitle("Mortar target");
 		int gridX, gridY;
 		SCR_MapEntity.GetGridPos(m_TargetEntity.GetOrigin(), gridX, gridY);
-		m_Task.SetDescription(string.Format(m_sTaskDescriptionFormat, gridX.ToString(3), gridY.ToString(3), adjustDirection));
+		string desc = string.Format(m_sTaskDescriptionFormat, gridX.ToString(3), gridY.ToString(3), adjustDirection);
+		m_Task.SetDescription(desc);
 		m_Task.SetOrigin(m_TargetEntity.GetOrigin());
 		m_Task.Create(true);
+		SCR_ScenarioFrameworkSystem.GetInstance().PopUpMessage("Target Created", desc);
 	}
 	
 	void RemoveTarget()
@@ -110,5 +118,56 @@ class RKN_MapMortarTargetTrainingManagerComponent : SCR_BaseGameModeComponent
 		m_Task.Finish(true);
 		
 		m_ParentLayer.RestoreToDefault(true, true, false);
+		SCR_ScenarioFrameworkSystem.GetInstance().PopUpMessage("Target Removed", "");
 	}
+	
+	void TargetSuccess()
+	{
+		if (!m_TargetEntity)
+			return;
+		
+		SCR_EntityHelper.DeleteEntityAndChildren(m_TargetEntity);
+		m_TargetEntity = null;
+		m_TargetSlot = null;
+		
+		m_Task.Finish(true);
+		
+		m_ParentLayer.RestoreToDefault(true, true, false);
+		SCR_ScenarioFrameworkSystem.GetInstance().PopUpMessage("Target Completed", "");
+	}
+	
+	void TargetFailed()
+	{
+		if (!m_TargetEntity)
+			return;
+		
+		SCR_EntityHelper.DeleteEntityAndChildren(m_TargetEntity);
+		m_TargetEntity = null;
+		m_TargetSlot = null;
+		
+		m_Task.Finish(true);
+		
+		m_ParentLayer.RestoreToDefault(true, true, false);
+		SCR_ScenarioFrameworkSystem.GetInstance().PopUpMessage("Target Failed", "");
+	}
+}
+
+class RKN_MortarTargetTrainingCompletionAction : SCR_ScenarioFrameworkActionBase
+{
+	RKN_MapMortarTargetTrainingManagerComponent m_Manager;
+	bool m_bSuccess;
+	
+	void RKN_MortarTargetTrainingCompletionAction(RKN_MapMortarTargetTrainingManagerComponent manager, bool success)
+	{
+		m_Manager = manager;
+		m_bSuccess = success;
+	}
+	
+	override void OnActivate(IEntity object)
+	{
+		if (m_bSuccess)
+			GetGame().GetCallqueue().CallLater(m_Manager.TargetSuccess, 0, false);
+		else
+			GetGame().GetCallqueue().CallLater(m_Manager.TargetFailed, 0, false);
+	}	
 }

@@ -91,6 +91,7 @@ class RKN_MapMortarTargetUI : SCR_MapUIBaseComponent
 		
 		slider = m_EditRoot.FindAnyWidget("RequiredHitsSliderRoot");
 		m_RequiredHitsSliderComp = SCR_SliderComponent.Cast(slider.FindHandler(SCR_SliderComponent));
+		m_RequiredHitsSliderComp.SetValue(3); // Don't know why this is necessary
 		
 		m_AdjustRadiusSlider = m_EditRoot.FindAnyWidget("AdjustRadiusSliderRoot");
 		m_AdjustRadiusSliderComp = SCR_SliderComponent.Cast(m_AdjustRadiusSlider.FindHandler(SCR_SliderComponent));
@@ -111,7 +112,7 @@ class RKN_MapMortarTargetUI : SCR_MapUIBaseComponent
 		m_CursorModule.HandleDialog(true);
 	}
 	
-	protected void OnAdjustChanged(SCR_SliderComponent slider, bool value)
+	protected void OnAdjustChanged(SCR_CheckboxComponent checkBox, bool value)
 	{
 		m_AdjustObserverSlider.SetEnabled(value);
 		m_AdjustRadiusSlider.SetEnabled(value);

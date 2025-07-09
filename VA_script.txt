@@ -34,6 +34,9 @@ VA2 (Radio)
 	
 	Inquery 2
 		"India 3-2 to Hammer, was that an explosion?"
+		
+	Hint
+		"Hammer, I pinned the origin of the enemy fire to around 078 034. Out."
 
 	Firemission 0 Request - Tone: *Urgent. Distressed. Bit unprofessional*
 		"India 3-2 to Hammer! We're taking fire and need assistance!"

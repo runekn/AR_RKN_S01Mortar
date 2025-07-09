@@ -1,3 +1,11 @@
+DecalEntity : "{108778392580971B}PrefabLibrary/Decals/Dirt/Decal_Dirt_Footprints_01.et" {
+ coords 8621.013 0.366 4318.62
+ angleX -90
+ angleY -141.173
+ angleZ -180
+ scale 2
+ FarPlane 1
+}
 GenericEntity : "{3E413771E1834D2F}Prefabs/Weapons/Rifles/M16/Rifle_M16A2.et" {
  coords 8633.615 289.974 4298.336
  angleX 70.68
@@ -81,6 +89,12 @@ $grp GenericEntity : "{645A1805E4C3BE31}Prefabs/Weapons/Ammo/RKN_Filled_AmmoBox_
 SCR_ScenarioFrameworkLogicCounter MissionCounter : "{6C1792C71DCAFD55}Prefabs/Systems/ScenarioFramework/Components/LogicCounter.et" {
  coords 8630.078 289.35 4304.938
  m_iCountTo 10
+}
+DecalEntity : "{7CD34CD999441835}PrefabLibrary/Decals/Dirt/Decal_Dirt_Footprints_02.et" {
+ coords 8618.459 0 4316.403
+ angleX -90
+ angleY 125.094
+ angleZ -42.444
 }
 GameEntity : "{8266820FFDE17477}Prefabs/Characters/Handwear/Gloves_Wool_01/Gloves_Wool_01.et" {
  coords 8641.257 290.538 4298.861
@@ -2701,6 +2715,43 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
      GenericEntity EnemyMortarTask_layer : "{5AF3BFDA2EAE56EA}Prefabs/Systems/ScenarioFramework/Components/LayerTask.et" {
       components {
        SCR_ScenarioFrameworkLayerTask "{5A2283E9F84958A1}" {
+        m_aActivationActions {
+         SCR_ScenarioFrameworkCreateVariable "{65D31AFE29D0D942}" {
+          m_sVariableName "HAS_TARGETED_EN_MORTAR"
+          m_sVariableValue "false"
+         }
+         SCR_ScenarioFrameworkActionWaitAndExecute "{65D31AFE1C19E81F}" {
+          m_iDelayInSeconds 80
+          m_aActions {
+           SCR_ScenarioFrameworkActionBasedOnConditions "{65D31AFE1AF79298}" {
+            m_aActivationConditions {
+             SCR_ScenarioFrameworkVariableValueCondition "{65D31AFE07D663A1}" {
+              m_sVariableName "HAS_TARGETED_EN_MORTAR"
+              m_sVariableValueToCheck "false"
+             }
+             SCR_ScenarioFrameworkTaskStatusCondition "{65D31AFE4F270183}" {
+              m_Getter SCR_ScenarioFrameworkGetEntityByName "{65D31AFE487F2052}" {
+               m_sEntityName "EnemyMortarTask_layer"
+              }
+              m_aAcceptableTaskStates {
+               0
+              }
+             }
+            }
+            m_aActions {
+             SCR_ScenarioFrameworkActionVoiceOverPlayLine "{65D31AFE776300DF}" {
+              m_sVoiceOverDataConfig "{5319BF1C90A39E63}Configs/VoiceData/rknSPMortar01.conf"
+              m_sLineName "INTRO_RADIO_HINT"
+              m_ActorGetter RKN_GetRadioEntity "{65D31AFD8FEF7E37}" {
+              }
+              m_PlayerGetter SCR_ScenarioFrameworkGetPlayerEntity "{65D31AFD8EEBF642}" {
+              }
+             }
+            }
+           }
+          }
+         }
+        }
         m_aTriggerActionsOnFinish {
          SCR_ScenarioFrameworkActionWaitAndExecute "{659255B754C7D748}" {
           m_iDelayInSeconds 5
@@ -2949,6 +3000,24 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Compon
      GenericEntity : "{A8B7AD5DBDCF22C2}Prefabs/Props/Military/SupplyBox/SupplyPortableContainers/SupplyPortableContainer_01/SupplyPortableContainers_01_large_item.et" {
       coords 89.095 -12.595 80.374
       angleY -29.99
+     }
+     GenericEntity RKN_MortarTargetSlot1 : "{C236ADE426F4E2E5}Prefabs/Systems/ScenarioFramework/Components/RKN_MortarTargetSlot.et" {
+      components {
+       RKN_MortarTargetSlot "{655EEA43D0CF9C30}" {
+        m_iTargetRadius 500
+        m_iTargetIgnoreRadius 500
+        m_iRequiredSplashesOnTarget 0
+        m_iTimeoutInSeconds 100
+        m_aActionsOnCompletion {
+         SCR_ScenarioFrameworkSetVariable "{65D31AFDCA6692DC}" {
+          m_sVariableName "HAS_TARGETED_EN_MORTAR"
+          m_sVariableValue "true"
+         }
+        }
+        m_bRequestAdjustFire 0
+       }
+      }
+      coords 102.23 -13.704 82.102
      }
      Turret EnemyMortar : "{D1FFE458E8AC4BDB}Prefabs/Weapons/Mortars/2B14/Mortar_2B14.et" {
       coords 91.467 -12.887 79.037
